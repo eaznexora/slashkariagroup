@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -47,18 +47,26 @@
         }
     </style>
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        if (window.location.pathname.endsWith('.html')) {
+            var cleanUrl = window.location.href.replace(/\.html/, '');
+            if (cleanUrl.endsWith('/index')) cleanUrl = cleanUrl.replace(/\/index/, '/');
+            window.history.replaceState(null, '', cleanUrl);
+        }
+    </script>
 </head>
 
 <body>
 
     <header id="header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="assets/logo/header-logo1.svg" alt="Lashkaria Group Logo" id="logo-header">
             </a>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="index.html#home" class="nav-link">HOME</a></li>
+                    <li><a href="/" class="nav-link">HOME</a></li>
                     <li><a href="about.html" class="nav-link">ABOUT US</a></li>
                     <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
                     <li><a href="blog.html" class="nav-link">INSIGHTS</a></li>
@@ -384,7 +392,7 @@
             </div>
             <div class="footer-col links-col">
                 <ul class="footer-links">
-                    <li><a href="index.html#home">Home <img src="assets/icons/right.svg" alt=""
+                    <li><a href="/">Home <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
                     <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
@@ -454,8 +462,8 @@
             <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz
                     Nexora</a></p>
             <div class="social-links">
-                <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-                <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/company/110608272" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="http://facebook.com/slashkariagroup" target="_blank"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
                 <!-- <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a> -->
             </div>

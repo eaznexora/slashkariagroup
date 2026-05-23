@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,6 +23,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/blog.css">
+
+    <script>
+        if (window.location.pathname.endsWith('.html')) {
+            var cleanUrl = window.location.href.replace(/\.html/, '');
+            if (cleanUrl.endsWith('/index')) cleanUrl = cleanUrl.replace(/\/index/, '/');
+            window.history.replaceState(null, '', cleanUrl);
+        }
+    </script>
 </head>
 
 <body>
@@ -30,13 +38,13 @@
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="assets/logo/header-logo1.svg" alt="Lashkaria Group Logo" id="logo-header">
             </a>
 
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="index.html#home" class="nav-link">HOME</a></li>
+                    <li><a href="/" class="nav-link">HOME</a></li>
                     <li><a href="about.html" class="nav-link">ABOUT US</a></li>
                     <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
                     <li><a href="blog.html" class="nav-link active">INSIGHTS</a></li>
@@ -99,7 +107,7 @@
                         class="blog-image">
                     <div class="blog-category">COMMUNITY</div>
                     <h3 class="blog-title">Building Communities, Not Just Buildings</h3>
-                    <p class="blog-description">Good design goes beyond aesthetics. Itâ€™s about creating spaces that
+                    <p class="blog-description">Good design goes beyond aesthetics. It’s about creating spaces that
                         enhance the way people live.</p>
                     <div class="blog-bottom">
                         <div class="blog-date">Apr 28, 2025</div>
@@ -378,13 +386,13 @@
 
         <!-- CTA Section -->
         <section id="contact" class="cta-section">
-            <!-- Layer 1: BG image as <img> â€” same approach as hero, crisp & no blur -->
+            <!-- Layer 1: BG image as <img> — same approach as hero, crisp & no blur -->
             <img src="assets/bg/cta-bg.png" alt="" class="cta-bg-img" aria-hidden="true">
-            <!-- Layer 2: Polygon shape â€” right side -->
+            <!-- Layer 2: Polygon shape — right side -->
             <img src="assets/bg/Polygon connect.png" alt="" class="cta-polygon" aria-hidden="true">
 
             <div class="container cta-container">
-                <!-- LEFT: Hero Text â€” top-left aligned -->
+                <!-- LEFT: Hero Text — top-left aligned -->
                 <div class="cta-text reveal-fade-left">
                     <h2 class="cta-title">FIND YOUR<br>PERFECT SPACE TODAY</h2>
                     <div class="accent-line-light"></div>
@@ -436,7 +444,7 @@
             <!-- Col 2: Quick Links -->
             <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.1s;">
                 <ul class="footer-links">
-                    <li><a href="index.html#home">Home <img src="assets/icons/right.svg" alt=""
+                    <li><a href="/">Home <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
                     <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
@@ -517,8 +525,8 @@
                     Nexora</a></p>
 
             <div class="social-links">
-                <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-                <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/company/110608272" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="http://facebook.com/slashkariagroup" target="_blank"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
             </div>
         </div>

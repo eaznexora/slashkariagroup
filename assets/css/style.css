@@ -309,7 +309,7 @@ header.scrolled .logo img {
 .nav-link {
     color: var(--text-white);
     font-size: 14px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     font-weight: 500;
 }
 
@@ -561,7 +561,7 @@ header.scrolled .logo img {
     margin-bottom: 20px;
     text-transform: uppercase;
     line-height: 1.0;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
 }
 
 .hero-subtitle {
@@ -693,7 +693,7 @@ header.scrolled .logo img {
     font-weight: 800;
     color: #192954;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     margin-bottom: 40px;
     line-height: 1.2;
 }
@@ -734,7 +734,7 @@ header.scrolled .logo img {
     font-size: 26px;
     font-weight: 700;
     color: #192954;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     margin-bottom: 10px;
 }
 
@@ -860,7 +860,7 @@ header.scrolled .logo img {
     font-weight: 800;
     color: #192954;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     line-height: 1.2;
 }
 
@@ -892,7 +892,7 @@ header.scrolled .logo img {
     font-size: 26px;
     font-weight: 700;
     color: #192954;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
@@ -936,7 +936,7 @@ header.scrolled .logo img {
     font-weight: 800;
     color: #192954;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     line-height: 1.2;
 }
 
@@ -968,7 +968,7 @@ header.scrolled .logo img {
     font-size: 26px;
     font-weight: 700;
     color: #192954;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
@@ -1019,7 +1019,7 @@ header.scrolled .logo img {
     font-weight: 800;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     margin-bottom: 40px;
     color: #FFFFFF;
 }
@@ -1069,7 +1069,7 @@ header.scrolled .logo img {
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #FFFFFF;
     /* Match number color */
     line-height: 1.2;
@@ -1113,7 +1113,7 @@ header.scrolled .logo img {
 
 .project-list-sidebar h3 {
     font-size: 14px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     margin-bottom: 25px;
     color: #000;
     opacity: 0.8;
@@ -1775,7 +1775,7 @@ header.scrolled .logo img {
     font-size: 42px;
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     text-transform: uppercase;
     color: #192954;
     margin-bottom: 20px;
@@ -1792,7 +1792,7 @@ header.scrolled .logo img {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.4;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #192954;
     max-width: 400px;
 }
@@ -1841,7 +1841,7 @@ header.scrolled .logo img {
     font-size: 19px;
     font-weight: 600;
     line-height: 1.2;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     text-transform: uppercase;
     color: #192954;
 }
@@ -1856,7 +1856,7 @@ header.scrolled .logo img {
     font-size: 18px;
     font-weight: 500;
     line-height: 1.3;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #192954;
 }
 
@@ -1891,7 +1891,7 @@ header.scrolled .logo img {
     font-size: 42px;
     font-weight: 700;
     line-height: 53px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #192954;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -1908,7 +1908,7 @@ header.scrolled .logo img {
     font-size: 20px;
     font-weight: 500;
     line-height: 25px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #192954;
     max-width: 357px;
     margin-bottom: 30px;
@@ -1977,7 +1977,7 @@ header.scrolled .logo img {
     font-size: 26px;
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #192954;
     text-transform: uppercase;
     margin-bottom: 6px;
@@ -2157,7 +2157,7 @@ header.scrolled .logo img {
     font-size: 18px;
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #192954;
     text-transform: uppercase;
     white-space: nowrap;
@@ -2506,7 +2506,7 @@ header.scrolled .logo img {
     color: #192954;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     margin-bottom: 10px;
 }
 
@@ -2613,7 +2613,7 @@ header.scrolled .logo img {
     font-size: 38px;
     font-weight: 800;
     line-height: 48px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 18px;
@@ -2631,7 +2631,7 @@ header.scrolled .logo img {
     font-size: 26px;
     font-weight: 500;
     line-height: 1.2;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #FFFFFF;
 }
 
@@ -2662,7 +2662,7 @@ header.scrolled .logo img {
     font-size: 33px;
     font-weight: 700;
     line-height: 41px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     text-transform: uppercase;
     text-align: center;
     color: #192954;
@@ -2682,7 +2682,7 @@ header.scrolled .logo img {
     font-size: 20px;
     font-weight: 500;
     line-height: 25px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #192954;
     text-align: center;
     margin-bottom: 18px;
@@ -2874,7 +2874,7 @@ header.scrolled .logo img {
     line-height: 1.2;
     color: #8FCEF1;
     text-transform: none;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     margin-top: 35px;
     /* Moved lower as per request */
 }
@@ -3373,7 +3373,7 @@ header.scrolled .logo img {
 .sidebar-header h3 {
     font-size: 14px;
     font-weight: 800;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #192954;
     text-transform: uppercase;
 }
@@ -3588,7 +3588,7 @@ header.scrolled .logo img {
     font-weight: 700;
     color: #192954;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
 }
 
 .marker-container.active .marker-label {
@@ -3672,7 +3672,7 @@ header.scrolled .logo img {
     color: #192954;
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
 }
 
 .popup-location {
@@ -3822,7 +3822,7 @@ header.scrolled .logo img {
     .sidebar-header h3 {
         font-size: 18px;
         font-weight: 700;
-        letter-spacing: 0.05em;
+        letter-spacing: 0;
         color: #192954;
         text-transform: none;
     }
@@ -4151,7 +4151,7 @@ header.scrolled .logo img {
     font-weight: 600;
     color: #192954;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
 }
 
 /* Detailed Projects Section */
@@ -4285,7 +4285,7 @@ header.scrolled .logo img {
     font-weight: 700;
     color: #192954;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     margin-bottom: 5px;
 }
 
@@ -4797,7 +4797,7 @@ header.scrolled .logo img {
     .nav-link {
         font-size: 20px;
         font-weight: 500;
-        letter-spacing: 0.05em;
+        letter-spacing: 0;
     }
 
     .hamburger {
@@ -4865,7 +4865,7 @@ header.scrolled .logo img {
         line-height: 1.25;
         margin-bottom: 25px;
         padding: 0 5px;
-        letter-spacing: 0.05em;
+        letter-spacing: 0;
     }
 
     .hero-subtitle {

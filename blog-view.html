@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#192954">
 
     <title>Building Communities, Not Just Buildings | S. Lashkaria Group</title>
-    <meta name="description" content="Good design goes beyond aesthetics. Itâ€™s about creating spaces that enhance the way people live.">
+    <meta name="description" content="Good design goes beyond aesthetics. It’s about creating spaces that enhance the way people live.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
@@ -21,6 +21,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/blog.css">
+
+    <script>
+        if (window.location.pathname.endsWith('.html')) {
+            var cleanUrl = window.location.href.replace(/\.html/, '');
+            if (cleanUrl.endsWith('/index')) cleanUrl = cleanUrl.replace(/\/index/, '/');
+            window.history.replaceState(null, '', cleanUrl);
+        }
+    </script>
 </head>
 
 <body>
@@ -28,13 +36,13 @@
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="assets/logo/header-logo1.svg" alt="Lashkaria Group Logo" id="logo-header">
             </a>
 
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="index.html#home" class="nav-link">HOME</a></li>
+                    <li><a href="/" class="nav-link">HOME</a></li>
                     <li><a href="about.html" class="nav-link">ABOUT US</a></li>
                     <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
                     <li><a href="blog.html" class="nav-link active">INSIGHTS</a></li>
@@ -91,7 +99,7 @@
                 <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop" alt="Hero Image" class="blog-view-featured-img">
 
                 <div class="article-content">
-                    <p>At S. Lashkaria Group, we believe that real estate is more than concrete and steel â€” it's about people, purpose, and long-term value. Every project we build is designed to foster a sense of community and belonging.</p>
+                    <p>At S. Lashkaria Group, we believe that real estate is more than concrete and steel — it's about people, purpose, and long-term value. Every project we build is designed to foster a sense of community and belonging.</p>
 
                     <p>From open green spaces to thoughtfully planned amenities, our developments are crafted to improve everyday living.</p>
 
@@ -213,7 +221,7 @@
             <!-- Col 2: Quick Links -->
             <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.1s;">
                 <ul class="footer-links">
-                    <li><a href="index.html#home">Home <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li><a href="/">Home <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
                     <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
@@ -285,8 +293,8 @@
             <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz Nexora</a></p>
 
             <div class="social-links">
-                <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-                <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/company/110608272" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="http://facebook.com/slashkariagroup" target="_blank"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
             </div>
         </div>

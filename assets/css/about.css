@@ -349,7 +349,7 @@
     font-weight: 700;
     font-size: 42px;
     line-height: 53px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 45px;
@@ -404,7 +404,7 @@
     font-weight: 700;
     font-size: 25px;
     line-height: 31px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     text-transform: uppercase;
     color: #FFFFFF;
 }
@@ -413,7 +413,7 @@
     font-weight: 500;
     font-size: 22px;
     line-height: 28px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #FFFFFF;
     margin-left: 44px;
     /* Perfectly aligns text under the title (26px icon + 18px gap) */
@@ -449,7 +449,7 @@
 .trust-text {
     width: 682px;
     text-align: center;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #192954;
     margin: 0;
     line-height: 1.4;
@@ -524,7 +524,7 @@
     font-weight: 800;
     font-size: 38px;
     line-height: 48px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 14px;
@@ -547,7 +547,7 @@
     font-size: 26px;
     line-height: 120%;
     /* ~31px */
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     color: #FFFFFF;
     margin-bottom: 40px;
     /* Space between text and buttons */

@@ -607,7 +607,7 @@ body {
   font-size: clamp(14px, 1.5vw, 16px);
   /* Reduced */
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
 }
 
 .inner-divider {
@@ -654,7 +654,7 @@ body {
   /* Proportionally sized */
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
 }
 
 /* --- The White Card --- */
@@ -774,7 +774,7 @@ body {
   font-weight: 800;
   font-size: clamp(14px, 1.5vw, 16px);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
 }
 
 .director-bio {

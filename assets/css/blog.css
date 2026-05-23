@@ -117,7 +117,7 @@
     color:#192954;
     font-size:11px;
     font-weight:800;
-    letter-spacing:0.05em;
+    letter-spacing: 0;
 }
 
 /* TITLE */
@@ -260,7 +260,7 @@
     color: #192954;
     font-size: 11px;
     font-weight: 800;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     margin-bottom: 20px;
 }
 
@@ -269,7 +269,7 @@
     color: #192954;
     font-weight: 800;
     line-height: 1.2;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     margin-bottom: 15px;
 }
 
