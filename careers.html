@@ -1,0 +1,858 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | S. Lashkaria Group</title>
+    <meta name="description"
+        content="Build your future with S. Lashkaria Group. Join a team that values innovation, collaboration, and growth.">
+    <meta name="theme-color" content="#192954">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <style>
+        :root {
+            --primary-navy: #192954;
+            --accent-gold: #c5a059;
+            --bg-light: #F8FAFC;
+            --text-gray: #4F4B4C;
+            --border-color: #EDEDED;
+            --light-blue-bg: #F0F7FF;
+        }
+
+        body {
+            font-family: 'Mulish', sans-serif;
+            color: var(--primary-navy);
+            background: #FFFFFF;
+        }
+
+        /* --- Career Hero --- */
+        .career-hero {
+            padding: 120px 0 80px;
+            background: #FFFFFF;
+        }
+
+        .career-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .career-hero-content {
+            max-width: 540px;
+        }
+
+        .career-hero h1 {
+            font-size: clamp(40px, 5vw, 60px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .career-hero p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--text-gray);
+            margin-bottom: 32px;
+        }
+
+        .career-hero-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-navy {
+            display: inline-flex;
+            align-items: center;
+            background: var(--primary-navy);
+            color: #FFFFFF;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            letter-spacing: 0.03em;
+        }
+
+        .btn-navy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(25, 41, 84, 0.2);
+        }
+
+        /* --- Values Grid --- */
+        .values-section {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .value-card {
+            background: #FFFFFF;
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .value-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--light-blue-bg);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--primary-navy);
+        }
+
+        .value-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .value-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .value-card p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--text-gray);
+        }
+
+        /* --- Open Positions --- */
+        .positions-section {
+            padding: 100px 0;
+        }
+
+        .positions-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 48px;
+        }
+
+        .positions-header h2 {
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .view-all-link {
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .jobs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .jobs-table th {
+            text-align: left;
+            padding: 15px 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #A0A0A0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .job-row {
+            cursor: pointer;
+            transition: background 0s ease, color 0s ease;
+        }
+
+        .job-row:hover {
+            background: var(--primary-navy) !important;
+            color: #FFFFFF !important;
+            transition: background 0.5s ease, color 0.5s ease !important;
+            transition-delay: 0s !important;
+        }
+
+        .job-row:hover td {
+            color: #FFFFFF !important;
+            transition: color 0.5s ease !important;
+            transition-delay: 0s !important;
+        }
+
+        .job-row:hover .job-arrow {
+            color: #FFFFFF !important;
+            transition: color 0.5s ease !important;
+            transition-delay: 0s !important;
+        }
+
+        .job-row td {
+            padding: 25px 20px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .job-title {
+            font-weight: 700;
+        }
+
+        .job-arrow {
+            text-align: right !important;
+            color: #A0A0A0;
+            font-size: 24px;
+        }
+
+        /* --- Banner CTA --- */
+        .banner-cta {
+            background: var(--primary-navy);
+            padding: 80px 0;
+            color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('data:image/svg+xml,<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><path d="M0 400L400 0M0 0L400 400" stroke="white" stroke-opacity="0.05" fill="none"/></svg>');
+            background-size: 100px 100px;
+            opacity: 0.3;
+        }
+
+        .banner-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .banner-text h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #FFFFFF !important;
+        }
+
+        .banner-text p {
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+        .btn-outline-white {
+            background: #FFFFFF;
+            color: var(--primary-navy);
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid #FFFFFF;
+        }
+
+        .btn-outline-white:hover {
+            background: transparent;
+            color: #FFFFFF;
+        }
+
+        /* --- Mobile Styles --- */
+        @media (max-width: 992px) {
+            .career-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .career-hero-content {
+                max-width: 100%;
+            }
+
+            .career-hero-img {
+                height: 250px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .jobs-table thead {
+                display: none;
+            }
+
+            .job-row {
+                display: block;
+                padding: 20px;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .job-row td {
+                display: block;
+                padding: 5px 0;
+                border: none;
+                font-size: 16px;
+            }
+
+            .job-title {
+                font-size: 20px;
+            }
+
+            .job-location {
+                display: none !important;
+            }
+
+            .job-arrow {
+                display: none !important;
+            }
+
+            .banner-grid {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .banner-text h2 {
+                font-size: 28px;
+            }
+        }
+
+        /* Careers Modal Styles & Responsiveness */
+        #resumeModal {
+            overflow-y: auto;
+            align-items: flex-start;
+            padding: 50px 20px;
+        }
+
+        #resumeModal .brochure-modal-card {
+            width: 780px;
+            max-width: 100%;
+            margin: auto;
+            padding: 50px 50px;
+            transform: translateY(20px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        #resumeModal.active .brochure-modal-card {
+            transform: translateY(0) scale(1);
+        }
+
+        #resumeModal .form-group select {
+            color: #7A7979;
+            background: transparent;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #resumeModal .form-group select option {
+            background: #FFFFFF;
+            color: #192954;
+        }
+
+        /* 2-column grid for desktop form */
+        #resumeModal .career-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        #resumeModal .career-form-grid .form-group {
+            margin-bottom: 0;
+        }
+
+        #resumeModal .career-form-grid .form-full {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 768px) {
+            #resumeModal .brochure-modal-card {
+                width: 100%;
+                padding: 40px 25px;
+            }
+
+            #resumeModal .career-form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Resume CTA button â€” no pulse animation, no glow, simple hover only */
+        #openResumeModal.cta-button {
+            animation: none;
+            transition: filter 0.25s ease;
+        }
+
+        #openResumeModal.cta-button:hover {
+            transform: none;
+            box-shadow: none;
+            filter: brightness(0.93);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo/header-logo1.svg" alt="Lashkaria Group Logo" id="logo-header">
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html#home" class="nav-link">HOME</a></li>
+                    <li><a href="about.html" class="nav-link">ABOUT US</a></li>
+                    <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li><a href="blog.html" class="nav-link">INSIGHTS</a></li>
+                    <li><a href="careers.html" class="nav-link active">CAREERS</a></li>
+
+                    <li class="mobile-nav-item"><a href="#" class="nav-link">Download Profile</a></li>
+                    <li class="mobile-nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-outline-header">Download Profile</a>
+                <a href="contact.html" class="cta-button"><span>CONTACT US</span></a>
+            </div>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Career Hero -->
+        <section class="career-hero">
+            <div class="container">
+                <div class="career-hero-grid">
+                    <div class="career-hero-content reveal-fade-left">
+                        <h1>BUILD YOUR FUTURE WITH US</h1>
+                        <p>At S. Lashkaria Group, we believe our people are our biggest strength. Join a team that
+                            values innovation, collaboration, and growth.</p>
+                        <a href="#positions" class="btn-navy">View Open Positions &rarr;</a>
+                    </div>
+                    <div class="career-hero-visual reveal-fade-right">
+                        <img src="assets/images/career-hero.png" alt="S. Lashkaria Architecture"
+                            class="career-hero-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="values-section">
+            <div class="container">
+                <div class="values-grid">
+                    <!-- Value 1 -->
+                    <div class="value-card reveal-fade-up">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>People First</h3>
+                        <p>We empower our people and encourage their ideas to foster a culture of ownership.</p>
+                    </div>
+                    <!-- Value 2 -->
+                    <div class="value-card reveal-fade-up" style="transition-delay: 0.1s;">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 20V10"></path>
+                                <path d="M12 20V4"></path>
+                                <path d="M6 20v-6"></path>
+                            </svg>
+                        </div>
+                        <h3>Grow Together</h3>
+                        <p>Continuous learning and career growth opportunities are at the heart of our mission.</p>
+                    </div>
+                    <!-- Value 3 -->
+                    <div class="value-card reveal-fade-up" style="transition-delay: 0.2s;">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18h6"></path>
+                                <path d="M10 22h4"></path>
+                                <path d="M12 2C9 2 6 4 6 7c0 3 2 4 2 6v2h8v-2c0-2 2-3 2-6 0-3-3-5-6-5z"></path>
+                            </svg>
+                        </div>
+                        <h3>Innovate Always</h3>
+                        <p>Work on challenging projects that create a real impact on urban landscapes.</p>
+                    </div>
+                    <!-- Value 4 -->
+                    <div class="value-card reveal-fade-up" style="transition-delay: 0.3s;">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                        </div>
+                        <h3>Integrity & Respect</h3>
+                        <p>We build trust through transparency, ethical practices, and mutual respect.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Positions -->
+        <section id="positions" class="positions-section">
+            <div class="container">
+                <div class="positions-header">
+                    <h2>Open Positions</h2>
+                    <span class="view-all-link" style="cursor: default;">View openings</span>
+                </div>
+
+                <table class="jobs-table">
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Department</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="job-row reveal-fade-up">
+                            <td class="job-title">Senior Architect</td>
+                            <td>Architecture</td>
+                            <td class="job-arrow">&rarr;</td>
+                        </tr>
+                        <tr class="job-row reveal-fade-up" style="transition-delay: 0.05s;">
+                            <td class="job-title">Project Manager</td>
+                            <td>Project Management</td>
+                            <td class="job-arrow">&rarr;</td>
+                        </tr>
+                        <tr class="job-row reveal-fade-up" style="transition-delay: 0.1s;">
+                            <td class="job-title">Civil Site Engineer</td>
+                            <td>Construction</td>
+                            <td class="job-arrow">&rarr;</td>
+                        </tr>
+                        <tr class="job-row reveal-fade-up" style="transition-delay: 0.15s;">
+                            <td class="job-title">Interior Designer</td>
+                            <td>Design</td>
+                            <td class="job-arrow">&rarr;</td>
+                        </tr>
+                        <tr class="job-row reveal-fade-up" style="transition-delay: 0.2s;">
+                            <td class="job-title">Business Development Executive</td>
+                            <td>Sales & Marketing</td>
+                            <td class="job-arrow">&rarr;</td>
+                        </tr>
+                        <tr class="job-row reveal-fade-up" style="transition-delay: 0.25s;">
+                            <td class="job-title">Billing & Planning Engineer</td>
+                            <td>Billing & Planning</td>
+                            <td class="job-arrow">&rarr;</td>
+                        </tr>
+                        <tr class="job-row reveal-fade-up" style="transition-delay: 0.3s;">
+                            <td class="job-title">Purchase Manager</td>
+                            <td>Procurement & Purchase</td>
+                            <td class="job-arrow">&rarr;</td>
+                        </tr>
+                        <tr class="job-row reveal-fade-up" style="transition-delay: 0.35s;">
+                            <td class="job-title">Real Estate Sales Executive</td>
+                            <td>Sales & Marketing</td>
+                            <td class="job-arrow">&rarr;</td>
+                        </tr>
+                        <tr class="job-row reveal-fade-up" style="transition-delay: 0.4s;">
+                            <td class="job-title">QA/QC Engineer</td>
+                            <td>Quality Control</td>
+                            <td class="job-arrow">&rarr;</td>
+                        </tr>
+                        <tr class="job-row reveal-fade-up" style="transition-delay: 0.45s;">
+                            <td class="job-title">Liaisoning Officer</td>
+                            <td>Legal & Liaisoning</td>
+                            <td class="job-arrow">&rarr;</td>
+                        </tr>
+                        <tr class="job-row reveal-fade-up" style="transition-delay: 0.5s;">
+                            <td class="job-title">Site Supervisor</td>
+                            <td>Construction</td>
+                            <td class="job-arrow">&rarr;</td>
+                        </tr>
+                        <tr class="job-row reveal-fade-up" style="transition-delay: 0.55s;">
+                            <td class="job-title">HR & Admin Specialist</td>
+                            <td>Human Resources</td>
+                            <td class="job-arrow">&rarr;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Banner CTA -->
+        <section class="banner-cta">
+            <div class="container">
+                <div class="banner-grid reveal-fade-up">
+                    <div class="banner-text">
+                        <h2>Don't See the Right Role?</h2>
+                        <p>We're always looking for talented individuals to join our journey.</p>
+                    </div>
+                    <button id="openResumeModal" class="cta-button"><span>SEND US YOUR RESUME</span></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <!-- Col 1: Brand -->
+            <div class="footer-col brand-col reveal-fade-up">
+                <img src="assets/logo/logo-footer.svg" alt="Lashkaria Group" class="footer-logo">
+                <div class="footer-iso-icons">
+                    <img src="assets/ISO/iso-9001-2015.png" alt="ISO 9001" class="iso-img">
+                    <img src="assets/ISO/iso-14001-2015.png" alt="ISO 14001" class="iso-img">
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.1s;">
+                <ul class="footer-links">
+                    <li><a href="index.html#home">Home <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="projects.html">Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="#">Download Profile <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Our Projects -->
+            <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.2s;">
+                <ul class="footer-links">
+                    <li><a href="projects.html#completed">Completed Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="projects.html#ongoing">Ongoing Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="projects.html">Upcoming Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="careers.html">Careers <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact Info -->
+            <div class="footer-col contact-col reveal-fade-up" style="transition-delay: 0.3s;">
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
+                        <p><a href="https://www.google.com/maps/dir/?api=1&destination=19.113575365657606,72.83949792334383"
+                                target="_blank">S. Lashkaria Group Unit no. 111, 1st Floor, Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri (W), Mumbai 400053</a></p>
+                    </div>
+                    <div class="contact-divider"></div>
+                    <div class="contact-item">
+                        <img src="assets/icons/call.svg" alt="" class="contact-icon">
+                        <p>
+                            <a href="tel:+912226256875">+91 2226256875</a><br>
+                            <a href="tel:+912226256876">+91 2226256876</a>
+                        </p>
+                    </div>
+                    <div class="contact-divider"></div>
+                    <div class="contact-item">
+                        <img src="assets/icons/mail.svg" alt="" class="contact-icon">
+                        <p><a href="mailto:slashkariagroup@gmail.com">slashkariagroup@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom divider -->
+        <div class="container">
+            <div class="footer-bottom-line"></div>
+        </div>
+
+        <!-- Bottom Row: Copyright, Privacy, Credits, Socials -->
+        <div class="container footer-bottom-row reveal-fade-up">
+            <div class="footer-bottom-left">
+                <p class="copyright">@2026 S. Lashkaria Group. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <div class="legal-column">
+                        <a href="privacy.html" class="footer-sub-link">Privacy Policy</a>
+                        <a href="disclaimer.html" class="footer-sub-link">Disclaimer</a>
+                    </div>
+                    <div class="legal-column">
+                        <a href="terms.html" class="footer-sub-link">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+            <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz
+                    Nexora</a></p>
+            <div class="social-links">
+                <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script>
+        // Resume Modal Logic
+        const resumeModalHtml = `
+            <div class="modal-overlay" id="resumeModal">
+                <div class="brochure-modal-card">
+                    <button class="modal-close" id="closeResumeModal">&times;</button>
+                    <div class="brochure-form">
+                        <h3>Join Our Team</h3>
+                        <div class="form-heading-line"></div>
+                        <p>Submit your details and resume, and we'll get in touch with you.</p>
+                        <form id="resumeForm">
+                            <div class="career-form-grid">
+                            <div class="form-group">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#7D7979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 21px; height: 21px; flex-shrink: 0; opacity: 0.8;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                <input type="text" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <img src="assets/icons/contact-call.svg" alt="Phone">
+                                <input type="tel" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <img src="assets/icons/contact-mail.svg" alt="Email">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#7D7979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 21px; height: 21px; flex-shrink: 0; opacity: 0.8;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                                <input type="text" id="jobPositionInput" placeholder="Applying For" readonly style="background: rgba(0, 0, 0, 0.03); cursor: not-allowed; font-weight: 700; color: #192954;">
+                            </div>
+                            <div class="form-group">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#7D7979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 21px; height: 21px; flex-shrink: 0; opacity: 0.8;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <select id="experienceInput" required style="flex: 1; border: none; outline: none; background: transparent; font-family: 'Mulish', sans-serif; font-size: 20px; font-weight: 500; color: #7A7979; appearance: none; -webkit-appearance: none;">
+                                    <option value="" disabled selected>Total Experience</option>
+                                    <option value="Fresher">Fresher / Entry Level</option>
+                                    <option value="1-3 Years">1 - 3 Years</option>
+                                    <option value="3-5 Years">3 - 5 Years</option>
+                                    <option value="5-8 Years">5 - 8 Years</option>
+                                    <option value="8+ Years">8+ Years</option>
+                                </select>
+                                <span style="font-size: 14px; color: #7D7979; pointer-events: none; margin-left: auto;">&#9662;</span>
+                            </div>
+                            <div class="form-group">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#7D7979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 21px; height: 21px; flex-shrink: 0; opacity: 0.8;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                <select id="noticePeriodInput" required style="flex: 1; border: none; outline: none; background: transparent; font-family: 'Mulish', sans-serif; font-size: 20px; font-weight: 500; color: #7A7979; appearance: none; -webkit-appearance: none;">
+                                    <option value="" disabled selected>Notice Period</option>
+                                    <option value="Immediate">Immediate</option>
+                                    <option value="15 Days">15 Days</option>
+                                    <option value="30 Days">30 Days</option>
+                                    <option value="60 Days">60 Days</option>
+                                    <option value="90 Days">90 Days</option>
+                                </select>
+                                <span style="font-size: 14px; color: #7D7979; pointer-events: none; margin-left: auto;">&#9662;</span>
+                            </div>
+                            <div class="form-group form-full">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#7D7979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 21px; height: 21px; flex-shrink: 0; opacity: 0.8;"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                <input type="text" placeholder="Expected CTC (LPA)" required>
+                            </div>
+                            <div class="form-group form-full" style="align-items: flex-start; padding: 12px 20px;">
+                                <img src="assets/icons/message.svg" alt="Message" style="margin-top: 4px;">
+                                <textarea placeholder="Brief Cover Note / Message" rows="3" style="flex: 1; border: none; outline: none; background: transparent; font-family: 'Mulish', sans-serif; font-size: 20px; font-weight: 500; color: #7A7979; resize: none;"></textarea>
+                            </div>
+                            <div class="form-group form-full" style="border: 2px dashed #EDEDED; padding: 25px; text-align: center; border-radius: 12px; background: #F9FAFB; transition: border-color 0.3s ease;">
+                                <label for="resumeFile" style="cursor: pointer; display: block;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#192954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 40px; height: 40px; margin-bottom: 12px; opacity: 0.8;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><polyline points="9 15 12 12 15 15"></polyline></svg>
+                                    <span style="display: block; font-weight: 800; color: #192954; font-size: 18px; margin-bottom: 4px;">Upload Resume (PDF/DOC)</span>
+                                    <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" style="display: none;" required>
+                                    <span id="fileNameDisplay" style="display: block; font-size: 14px; color: #64748B; font-weight: 500;">No file chosen</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn-consult form-full" style="width: 100%; margin-top: 10px; padding: 18px; font-weight: 800;">SUBMIT APPLICATION &rarr;</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        document.body.insertAdjacentHTML('beforeend', resumeModalHtml);
+
+        const modal = document.getElementById('resumeModal');
+        const openBtn = document.getElementById('openResumeModal');
+        const closeBtn = document.getElementById('closeResumeModal');
+        const fileInput = document.getElementById('resumeFile');
+        const fileNameDisplay = document.getElementById('fileNameDisplay');
+        const resumeForm = document.getElementById('resumeForm');
+
+        // Handle Send Us Resume CTA Click
+        if (openBtn) {
+            openBtn.addEventListener('click', () => {
+                document.getElementById('jobPositionInput').value = 'General Application';
+                modal.classList.add('active');
+            });
+        }
+
+        // Handle Job Row Clicks
+        const jobRows = document.querySelectorAll('.job-row');
+        jobRows.forEach(row => {
+            row.addEventListener('click', () => {
+                const jobTitle = row.querySelector('.job-title').textContent.trim();
+                document.getElementById('jobPositionInput').value = jobTitle;
+                modal.classList.add('active');
+            });
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('active');
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            const fileName = e.target.files[0] ? e.target.files[0].name : 'No file chosen';
+            fileNameDisplay.textContent = fileName;
+        });
+
+        resumeForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your interest! Your application has been submitted successfully.');
+            modal.classList.remove('active');
+            resumeForm.reset();
+            fileNameDisplay.textContent = 'No file chosen';
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+

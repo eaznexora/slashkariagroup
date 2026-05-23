@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S. Lashkaria Group | Crafting Landmarks That Define Modern Living</title>
+    <meta name="description"
+        content="Lashkaria Group - Pioneering premium-quality real estate with unmatched craftsmanship. Discover thoughtfully designed spaces in prime locations.">
+    <meta name="theme-color" content="#192954">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <script>
+        if (!window.location.pathname.endsWith('/') && !window.location.pathname.endsWith('.html')) {
+            var newUrl = window.location.href + "/";
+            window.history.replaceState(null, '', newUrl);
+        }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="assets/logo/header-logo1.svg" alt="Lashkaria Group Logo" id="logo-header">
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">HOME</a></li>
+                    <li><a href="about.html" class="nav-link">ABOUT US</a></li>
+                    <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li><a href="blog.html" class="nav-link">INSIGHTS</a></li>
+                    <li><a href="careers.html" class="nav-link">CAREERS</a></li>
+                    <li class="mobile-nav-item"><a href="#" class="nav-link">DOWNLOAD PROFILE</a></li>
+                    <li class="mobile-nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" class="btn-outline-header">DOWNLOAD PROFILE</a>
+                <a href="contact.html" class="cta-button">
+                    <span>CONTACT US</span>
+                </a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-slider-wrapper">
+                <div class="hero-slider-container">
+                    <!-- Slide 1 -->
+                    <div class="hero-slide active">
+                        <div class="container hero-container">
+                            <div class="hero-content reveal-fade-up">
+                                <h1 class="hero-title">CRAFTING LANDMARKS <br> THAT DEFINE MODERN <br
+                                        class="mobile-br">LIVING</h1>
+                                <p class="hero-subtitle">Premium residences in prime locations, designed for those who
+                                    expect more.
+                                </p>
+                                <div class="hero-btns">
+                                    <a href="#projects" class="btn btn-hero btn-explore">Explore Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-slide-bg">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="assets/bg/home-page-mobile-bg.png">
+                                <img src="assets/bg/hero-bg.png" alt="Lashkaria Hero" class="hero-image">
+                            </picture>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="hero-slide">
+                        <div class="container hero-container">
+                            <div class="hero-content reveal-fade-up">
+                                <h1 class="hero-title">ELEVATING URBAN <br> SPACES WITH <br class="mobile-br">PRECISION
+                                </h1>
+                                <p class="hero-subtitle">Innovative designs meeting unmatched craftsmanship in every
+                                    project.
+                                </p>
+                                <div class="hero-btns">
+                                    <a href="#projects" class="btn btn-hero btn-explore">Explore Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-slide-bg">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="assets/bg/hero-bg2-mobile.jpeg">
+                                <img src="assets/bg/hero-bg2.jpeg" alt="Lashkaria Hero" class="hero-image">
+                            </picture>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="hero-slide">
+                        <div class="container hero-container">
+                            <div class="hero-content reveal-fade-up">
+                                <h1 class="hero-title">DEFINING THE <br> FUTURE OF <br class="mobile-br">LUXURY</h1>
+                                <p class="hero-subtitle">Creating sustainable communities that inspire and endure.
+                                </p>
+                                <div class="hero-btns">
+                                    <a href="#projects" class="btn btn-hero btn-explore">Explore Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-slide-bg">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="assets/images/mobile-slide-3.jpeg">
+                                <img src="assets/bg/hero-bg3.jpeg" alt="Lashkaria Hero" class="hero-image">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Navigation -->
+            <div class="hero-slider-nav">
+                <button class="hero-slider-arrow prev" aria-label="Previous Slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="hero-slider-arrow next" aria-label="Next Slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Slider Pagination -->
+            <div class="hero-slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section class="vision-mission" id="about">
+            <div class="about-bg-images">
+                <img src="assets/bg/about-1.png" alt="Hexagon" class="bg-about-1 reveal-fade-up">
+                <img src="assets/bg/about-2.png" alt="Hexagon" class="bg-about-2 reveal-fade-up"
+                    style="transition-delay: 0.2s;">
+                <img src="assets/bg/about-3.png" alt="Hexagon" class="bg-about-3 reveal-fade-up"
+                    style="transition-delay: 0.4s;">
+            </div>
+            <div class="container about-container">
+                <div class="hexagon-image reveal-fade-left">
+                    <img src="assets/images/homepage-below-banner.png" alt="Vision Image">
+                </div>
+                <div class="vision-content">
+                    <h2 class="reveal-fade-up">BUILDING SPACES <br> THAT ELEVATE LIFE</h2>
+
+                    <div class="vision-cards">
+                        <div class="vision-card reveal-fade-right">
+                            <div class="card-icon">
+                                <img src="assets/icons/Our Vision.png" alt="Our Vision Icon">
+                            </div>
+                            <div class="card-text">
+                                <h3>OUR VISION</h3>
+                                <p>To redefine urban living by creating world-class developments that elevate
+                                    lifestyles, drive economic growth, and set new benchmarks in innovation and
+                                    sustainability.</p>
+                            </div>
+                        </div>
+
+                        <div class="vision-card reveal-fade-right" style="transition-delay: 0.2s;">
+                            <div class="card-icon">
+                                <img src="assets/icons/our-mission.png" alt="Our Mission Icon">
+                            </div>
+                            <div class="card-text">
+                                <h3>OUR MISSION</h3>
+                                <p>Delivering luxurious, sustainable & high-quality real estate solutions through
+                                    innovative design, urban development, and trusted redevelopment projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider reveal-fade-up">
+            <div class="divider-line"></div>
+            <div class="divider-hex"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="values-bg-images">
+                <img src="assets/bg/about-4.png" alt="Hexagon" class="bg-about-4 reveal-fade-left">
+                <img src="assets/bg/about-5.png" alt="Hexagon" class="bg-about-5 reveal-fade-right">
+            </div>
+            <div class="container values-container">
+                <div class="values-left reveal-fade-left">
+                    <div class="about-brand-logo">
+                        <img src="assets/logo/logo-aboutus.png" alt="Lashkaria Logo">
+                    </div>
+                    <h2>WHAT WE <br> STAND FOR</h2>
+                </div>
+                <div class="values-grid">
+                    <div class="value-item reveal-fade-up">
+                        <div class="value-icon">
+                            <img src="assets/icons/excellence.png" alt="Excellence Icon">
+                        </div>
+                        <div class="value-text">
+                            <h3>EXCELLENCE</h3>
+                            <p>Pioneering premium-quality real estate with unmatched craftsmanship.</p>
+                        </div>
+                    </div>
+                    <div class="value-item reveal-fade-up" style="transition-delay: 0.1s;">
+                        <div class="value-icon">
+                            <img src="assets/icons/integrity.png" alt="Integrity Icon">
+                        </div>
+                        <div class="value-text">
+                            <h3>INTEGRITY</h3>
+                            <p>Building relationships on trust, transparency, and ethical practices.</p>
+                        </div>
+                    </div>
+                    <div class="value-item reveal-fade-up" style="transition-delay: 0.2s;">
+                        <div class="value-icon">
+                            <img src="assets/icons/innovation.png" alt="Innovation Icon">
+                        </div>
+                        <div class="value-text">
+                            <h3>INNOVATION</h3>
+                            <p>Leveraging technology and sustainable solutions for futuristic developments.</p>
+                        </div>
+                    </div>
+                    <div class="value-item reveal-fade-up" style="transition-delay: 0.3s;">
+                        <div class="value-icon">
+                            <img src="assets/icons/commitment.png" alt="Commitment Icon">
+                        </div>
+                        <div class="value-text">
+                            <h3>COMMITMENT</h3>
+                            <p>Delivering projects on time, every time, with unwavering quality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider reveal-fade-up">
+            <div class="divider-line"></div>
+            <div class="divider-hex"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container stats-container">
+                <h2 class="stats-header reveal-fade-up">DRIVEN BY NUMBERS. DEFINED BY IMPACT.</h2>
+                <div class="stats-grid">
+                    <div class="stat-item reveal-fade-up">
+                        <img src="assets/icons/area.svg" alt="Developed Icon">
+                        <div class="stat-number">2.7+</div>
+                        <div class="stat-label">Million sq. ft. Delivered</div>
+                    </div>
+                    <div class="stat-item reveal-fade-up" style="transition-delay: 0.1s;">
+                        <img src="assets/icons/flats.svg" alt="Units Icon">
+                        <div class="stat-number">6000+</div>
+                        <div class="stat-label">Units Delivered</div>
+                    </div>
+                    <div class="stat-item reveal-fade-up" style="transition-delay: 0.2s;">
+                        <img src="assets/icons/family-house.svg" alt="Families Icon">
+                        <div class="stat-number">9000+</div>
+                        <div class="stat-label">Happy Families</div>
+                    </div>
+                    <div class="stat-item reveal-fade-up" style="transition-delay: 0.3s;">
+                        <img src="assets/icons/crane.svg" alt="Pipeline Icon">
+                        <div class="stat-number">2.1+</div>
+                        <div class="stat-label">Million sq. ft. underdevelopment</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developments Section -->
+        <section id="explore-map" class="developments-section">
+            <div class="container section-container">
+                <div class="section-header reveal-fade-up">
+                    <div class="header-text-group">
+                        <h2 class="section-title-large">EXPLORE OUR DEVELOPMENTS</h2>
+                        <p class="section-subtitle">Discover thoughtfully designed spaces in prime locations.<br>Click
+                            on a marker to explore our projects.</p>
+                    </div>
+                    <div class="header-brand-group">
+                        <img src="assets/logo/logo-map.png" alt="Lashkaria Seal" class="map-header-logo">
+                    </div>
+                </div>
+
+                <div class="map-wrapper reveal-fade-up">
+                    <!-- Sidebar: Project List -->
+                    <aside class="project-sidebar">
+                        <div class="sidebar-header">
+                            <h3>Our Developments</h3>
+                        </div>
+                        <div class="sidebar-scrollable">
+                            <div class="sidebar-scrollable">
+                                <div class="location-cluster">
+                                    <ul class="project-list">
+                                        <li class="project-item active" data-project-id="4"
+                                            data-title="AMANN AKANKSHA HEIGHTS" data-location="Worli"
+                                            data-coords="[18.994548708264446, 72.8227243893941]"
+                                            data-image="assets/projects/5. Amann Akanksha Height (Worli).jpg"
+                                            data-desc="A premium residential tower in one of Mumbai's most prestigious and prime locations.">
+                                            <span class="marker-dot"></span>
+                                            <span class="item-text-desktop">AMANN AKANKSHA HEIGHTS</span>
+                                            <div class="mobile-item-content">
+                                                <div class="item-flex">
+                                                    <img src="assets/projects/5. Amann Akanksha Height (Worli).jpg"
+                                                        class="item-thumb" alt="AMANN AKANKSHA HEIGHTS">
+                                                    <div class="item-info">
+                                                        <div class="item-title">AMANN AKANKSHA HEIGHTS</div>
+                                                    </div>
+                                                    <svg class="item-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-active-extra">
+                                                    <p class="item-desc">A premium residential tower in one of Mumbai's
+                                                        most prestigious and prime loc...</p>
+                                                    <a href="projects.html#project-amann-akanksha-heights"
+                                                        class="btn-view-mobile">View Project &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="project-item" data-project-id="12" data-title="AMANN AVANTI"
+                                            data-location="Worli" data-coords="[18.995610042209112, 72.8221221423283]"
+                                            data-image="assets/projects/amann-avanti-map.png"
+                                            data-desc="An elite residential development in Worli, offering luxury residences and modern architecture.">
+                                            <span class="marker-dot"></span>
+                                            <span class="item-text-desktop">AMANN AVANTI</span>
+                                            <div class="mobile-item-content">
+                                                <div class="item-flex">
+                                                    <img src="assets/projects/amann-avanti-map.png" class="item-thumb"
+                                                        alt="AMANN AVANTI">
+                                                    <div class="item-info">
+                                                        <div class="item-title">AMANN AVANTI</div>
+                                                    </div>
+                                                    <svg class="item-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-active-extra">
+                                                    <p class="item-desc">An elite residential development in Worli,
+                                                        offering luxury residences...</p>
+                                                    <a href="projects.html#project-amann-avanti"
+                                                        class="btn-view-mobile">View Project &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="project-item" data-project-id="6" data-title="AMANN HIGHLAND PARK"
+                                            data-location="Malad East"
+                                            data-coords="[19.178625586378484, 72.86583439419827]"
+                                            data-image="assets/projects/amann-highlands-map.png"
+                                            data-desc="Experience the serenity of green living with scenic views and rapid development.">
+                                            <span class="marker-dot"></span>
+                                            <span class="item-text-desktop">AMANN HIGHLAND PARK</span>
+                                            <div class="mobile-item-content">
+                                                <div class="item-flex">
+                                                    <img src="assets/projects/amann-highlands-map.png"
+                                                        class="item-thumb" alt="AMANN HIGHLAND PARK">
+                                                    <div class="item-info">
+                                                        <div class="item-title">AMANN HIGHLAND PARK</div>
+                                                    </div>
+                                                    <svg class="item-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-active-extra">
+                                                    <p class="item-desc">Experience the serenity of green living with
+                                                        scenic views and rapid developme...</p>
+                                                    <a href="projects.html#project-amann-highland-park"
+                                                        class="btn-view-mobile">View Project &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="project-item" data-project-id="1" data-title="AMANN HILLS"
+                                            data-location="Andheri West"
+                                            data-coords="[19.11971957166794, 72.84251737383262]"
+                                            data-image="assets/projects/amann-hills-map.png"
+                                            data-desc="Elevated living with premium residences and world-class amenities in the heart of Andheri.">
+                                            <span class="marker-dot"></span>
+                                            <span class="item-text-desktop">AMANN HILLS</span>
+                                            <div class="mobile-item-content">
+                                                <div class="item-flex">
+                                                    <img src="assets/projects/amann-hills-map.png" class="item-thumb"
+                                                        alt="AMANN HILLS">
+                                                    <div class="item-info">
+                                                        <div class="item-title">AMANN HILLS</div>
+                                                    </div>
+                                                    <svg class="item-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-active-extra">
+                                                    <p class="item-desc">Elevated living with premium residences and
+                                                        world-class amenities in the hear...</p>
+                                                    <a href="projects.html#project-amann-hills"
+                                                        class="btn-view-mobile">View Project &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="project-item" data-project-id="3" data-title="AMANN MARINA"
+                                            data-location="Worli" data-coords="[18.994705099448915, 72.82256855049698]"
+                                            data-image="assets/projects/amann-marina-map.png"
+                                            data-desc="Luxury seafront living featuring exclusive designs and breathtaking views of the Arabian Sea.">
+                                            <span class="marker-dot"></span>
+                                            <span class="item-text-desktop">AMANN MARINA</span>
+                                            <div class="mobile-item-content">
+                                                <div class="item-flex">
+                                                    <img src="assets/projects/amann-marina-map.png" class="item-thumb"
+                                                        alt="AMANN MARINA">
+                                                    <div class="item-info">
+                                                        <div class="item-title">AMANN MARINA</div>
+                                                    </div>
+                                                    <svg class="item-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-active-extra">
+                                                    <p class="item-desc">Luxury seafront living featuring exclusive
+                                                        designs and breathtaking views of ...</p>
+                                                    <a href="projects.html#project-amann-marina"
+                                                        class="btn-view-mobile">View Project &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="project-item" data-project-id="7" data-title="AMANN SAGAR"
+                                            data-location="Kandivali West" data-coords="[19.2050, 72.8400]"
+                                            data-image="assets/projects/amann-sagar-map.png"
+                                            data-desc="Stunning sea-view apartments offering premium living and modern conveniences in Kandivali.">
+                                            <span class="marker-dot"></span>
+                                            <span class="item-text-desktop">AMANN SAGAR</span>
+                                            <div class="mobile-item-content">
+                                                <div class="item-flex">
+                                                    <img src="assets/projects/amann-sagar-map.png" class="item-thumb"
+                                                        alt="AMANN SAGAR">
+                                                    <div class="item-info">
+                                                        <div class="item-title">AMANN SAGAR</div>
+                                                    </div>
+                                                    <svg class="item-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-active-extra">
+                                                    <p class="item-desc">Stunning sea-view apartments offering premium
+                                                        living and modern conveniences ...</p>
+                                                    <a href="projects.html#project-amann-sagar"
+                                                        class="btn-view-mobile">View Project &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="project-item" data-project-id="10" data-title="AMANN SOLITAIRE"
+                                            data-location="Borivali West" data-coords="[19.230479230181004, 72.8490449]"
+                                            data-image="assets/projects/amann-solitare-map.png"
+                                            data-desc="Luxury residences with meticulous design and premium finishes in the heart of Borivali.">
+                                            <span class="marker-dot"></span>
+                                            <span class="item-text-desktop">AMANN SOLITAIRE</span>
+                                            <div class="mobile-item-content">
+                                                <div class="item-flex">
+                                                    <img src="assets/projects/amann-solitare-map.png" class="item-thumb"
+                                                        alt="AMANN SOLITAIRE">
+                                                    <div class="item-info">
+                                                        <div class="item-title">AMANN SOLITAIRE</div>
+                                                    </div>
+                                                    <svg class="item-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-active-extra">
+                                                    <p class="item-desc">Luxury residences with meticulous design and
+                                                        premium finishes in the heart of...</p>
+                                                    <a href="projects.html#project-amann-solitaire"
+                                                        class="btn-view-mobile">View Project &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="project-item" data-project-id="8" data-title="AMANN SPRING"
+                                            data-location="Kandivali West"
+                                            data-coords="[19.20421121312154, 72.83516706243087]"
+                                            data-image="assets/projects/amann-spring-map.png"
+                                            data-desc="An elite residential space designed for comfort, style, and a sophisticated urban lifestyle.">
+                                            <span class="marker-dot"></span>
+                                            <span class="item-text-desktop">AMANN SPRING</span>
+                                            <div class="mobile-item-content">
+                                                <div class="item-flex">
+                                                    <img src="assets/projects/amann-spring-map.png" class="item-thumb"
+                                                        alt="AMANN SPRING">
+                                                    <div class="item-info">
+                                                        <div class="item-title">AMANN SPRING</div>
+                                                    </div>
+                                                    <svg class="item-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-active-extra">
+                                                    <p class="item-desc">An elite residential space designed for
+                                                        comfort, style, and a sophisticated u...</p>
+                                                    <a href="projects.html#project-amann-spring"
+                                                        class="btn-view-mobile">View Project &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="project-item" data-project-id="13" data-title="AMANN SQUARE"
+                                            data-location="Worli" data-coords="[18.99457075717606, 72.82261195230126]"
+                                            data-image="assets/projects/amann-square.jpeg"
+                                            data-desc="A premium commercial and retail development, featuring modern office spaces and exclusive brand outlets.">
+                                            <span class="marker-dot"></span>
+                                            <span class="item-text-desktop">AMANN SQUARE</span>
+                                            <div class="mobile-item-content">
+                                                <div class="item-flex">
+                                                    <img src="assets/projects/amann-square.jpeg" class="item-thumb"
+                                                        alt="AMANN SQUARE">
+                                                    <div class="item-info">
+                                                        <div class="item-title">AMANN SQUARE</div>
+                                                    </div>
+                                                    <svg class="item-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-active-extra">
+                                                    <p class="item-desc">A premium commercial and retail development,
+                                                        featuring modern office...</p>
+                                                    <a href="projects.html#project-amann-square"
+                                                        class="btn-view-mobile">View Project &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="project-item" data-project-id="11" data-title="JANKALYAN"
+                                            data-location="Dahisar East" data-coords="[19.2550, 72.8650]"
+                                            data-image="assets/projects/jankalyan-map.png"
+                                            data-desc="Thoughtfully designed residential spaces offering comfort and convenience in Dahisar.">
+                                            <span class="marker-dot"></span>
+                                            <span class="item-text-desktop">JANKALYAN</span>
+                                            <div class="mobile-item-content">
+                                                <div class="item-flex">
+                                                    <img src="assets/projects/jankalyan-map.png" class="item-thumb"
+                                                        alt="JANKALYAN">
+                                                    <div class="item-info">
+                                                        <div class="item-title">JANKALYAN</div>
+                                                    </div>
+                                                    <svg class="item-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-active-extra">
+                                                    <p class="item-desc">Thoughtfully designed residential spaces
+                                                        offering comfort and convenience in ...</p>
+                                                    <a href="projects.html#project-jankalyan"
+                                                        class="btn-view-mobile">View Project &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="project-item" data-project-id="2" data-title="LASHKARIA SOLITAIRE"
+                                            data-location="Andheri West" data-coords="[19.1200, 72.8350]"
+                                            data-image="assets/projects/lashkaria-solitare-map.png"
+                                            data-desc="An iconic landmark offering elite residences and a sophisticated urban lifestyle.">
+                                            <span class="marker-dot"></span>
+                                            <span class="item-text-desktop">LASHKARIA SOLITAIRE</span>
+                                            <div class="mobile-item-content">
+                                                <div class="item-flex">
+                                                    <img src="assets/projects/lashkaria-solitare-map.png"
+                                                        class="item-thumb" alt="LASHKARIA SOLITAIRE">
+                                                    <div class="item-info">
+                                                        <div class="item-title">LASHKARIA SOLITAIRE</div>
+                                                    </div>
+                                                    <svg class="item-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-active-extra">
+                                                    <p class="item-desc">An iconic landmark offering elite residences
+                                                        and a sophisticated urban lifest...</p>
+                                                    <a href="projects.html#project-lashkaria-solitaire"
+                                                        class="btn-view-mobile">View Project &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="project-item" data-project-id="5" data-title="RASHMI HEIGHTS"
+                                            data-location="Malad East"
+                                            data-coords="[19.178967689857654, 72.85163518319945]"
+                                            data-image="assets/projects/rashmi-heights-map.png"
+                                            data-desc="Modern urban spaces designed for vibrant community living and family comfort.">
+                                            <span class="marker-dot"></span>
+                                            <span class="item-text-desktop">RASHMI HEIGHTS</span>
+                                            <div class="mobile-item-content">
+                                                <div class="item-flex">
+                                                    <img src="assets/projects/rashmi-heights-map.png" class="item-thumb"
+                                                        alt="RASHMI HEIGHTS">
+                                                    <div class="item-info">
+                                                        <div class="item-title">RASHMI HEIGHTS</div>
+                                                    </div>
+                                                    <svg class="item-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-active-extra">
+                                                    <p class="item-desc">Modern urban spaces designed for vibrant
+                                                        community living and family comfort.</p>
+                                                    <a href="projects.html#project-rashmi-heights"
+                                                        class="btn-view-mobile">View Project &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-footer">
+                            <a href="projects.html" class="btn-view-all">View All Projects &rarr;</a>
+                        </div>
+                    </aside>
+
+                    <!-- Map Container -->
+                    <div id="map" class="map-view-container">
+                        <!-- Leaflet Map will be initialized here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section id="about" class="legacy-section">
+            <!-- Top Gradient Line -->
+            <div class="gradient-divider top"></div>
+
+            <div class="container legacy-container">
+                <!-- Background Decoration Assets -->
+                <img src="assets/bg/ploygon.png" alt="" class="bg-legacy-polygon reveal-fade-right">
+                <img src="assets/images/corner-family-homepage.jpeg" alt="" class="bg-legacy-building reveal-fade-up"
+                    style="transition-delay: 0.2s; width:400px; left: 130px; border-radius: 12px;">
+
+                <div class="legacy-layout">
+                    <!-- Left Content -->
+                    <div class="legacy-content reveal-fade-left">
+                        <h2 class="legacy-title">OUR LEGACY OF EXCELLENCE</h2>
+                        <div class="legacy-accent"></div>
+                        <p class="legacy-description">With a strong foundation in real estate and construction, we
+                            create spaces and communities that stand the test of time.</p>
+                    </div>
+
+                    <!-- Right Services Grid -->
+                    <div class="legacy-grid">
+                        <!-- Card 1 -->
+                        <div class="legacy-card reveal-fade-up">
+                            <div class="card-header">
+                                <img src="assets/icons/urban.svg" alt="Urban" class="card-icon">
+                                <h3 class="card-title">Urban Redevelopment & SRA Projects</h3>
+                            </div>
+                            <div class="card-line"></div>
+                            <p class="card-desc">Transforming communities with modern infrastructure</p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="legacy-card reveal-fade-up" style="transition-delay: 0.1s;">
+                            <div class="card-header">
+                                <img src="assets/icons/building.svg" alt="Building" class="card-icon">
+                                <h3 class="card-title">Premium Residential Communities</h3>
+                            </div>
+                            <div class="card-line"></div>
+                            <p class="card-desc">High-end apartments & gated townships</p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="legacy-card reveal-fade-up" style="transition-delay: 0.2s;">
+                            <div class="card-header">
+                                <img src="assets/icons/corporate-icon.png" alt="Corporate" class="card-icon">
+                                <h3 class="card-title">Corporate & Commercial Complexes</h3>
+                            </div>
+                            <div class="card-line"></div>
+                            <p class="card-desc">Dynamic office spaces & IT parks</p>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="legacy-card reveal-fade-up" style="transition-delay: 0.3s;">
+                            <div class="card-header">
+                                <img src="assets/icons/infrastructure.svg" alt="Infrastructure" class="card-icon">
+                                <h3 class="card-title">Public Infrastructure Development</h3>
+                            </div>
+                            <div class="card-line"></div>
+                            <p class="card-desc">Roads, bridges & urban planning</p>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="legacy-card reveal-fade-up" style="transition-delay: 0.4s;">
+                            <div class="card-header">
+                                <img src="assets/icons/retail.svg" alt="Retail" class="card-icon">
+                                <h3 class="card-title">Retail & Hospitality Spaces</h3>
+                            </div>
+                            <div class="card-line"></div>
+                            <p class="card-desc">Shopping malls, hotels & serviced residences</p>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="legacy-card reveal-fade-up" style="transition-delay: 0.5s;">
+                            <div class="card-header">
+                                <img src="assets/icons/Healthcare.svg" alt="Healthcare" class="card-icon">
+                                <h3 class="card-title">Healthcare & Educational Institutions</h3>
+                            </div>
+                            <div class="card-line"></div>
+                            <p class="card-desc">Cutting-edge hospitals & schools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Gradient Line -->
+            <div class="gradient-divider bottom"></div>
+        </section>
+
+        <!-- Crafted Developments Section -->
+        <section id="projects" class="crafted-section">
+            <div class="container">
+
+                <!-- TOP ROW: Header (left) + Big Card (right) -->
+                <div class="crafted-top-row">
+
+                    <!-- LEFT: Section Header -->
+                    <div class="crafted-header reveal-fade-up">
+                        <h2 class="crafted-title">CRAFTED<br>DEVELOPMENTS</h2>
+                        <div class="crafted-accent"></div>
+                        <p class="crafted-subtitle">Spaces that define modern living, crafted with precision and
+                            long-term vision.</p>
+                        <a href="projects.html" class="btn-all-projects">View All Projects &rarr;</a>
+                    </div>
+
+                    <!-- RIGHT: Big Card -->
+                    <div id="active-project-container" class="active-project reveal-fade-up">
+                        <!-- Content injected by JS -->
+                    </div>
+
+                </div><!-- end .crafted-top-row -->
+
+                <!-- Navigation: full-width, right-aligned -->
+                <div class="projects-nav">
+                    <button id="prev-project" class="nav-btn prev">
+                        <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5 0L34.5215 9.25V27.75L18.5 37L2.47853 27.75V9.25L18.5 0Z" fill="#F4F4F4"
+                                stroke="#192954" />
+                            <path d="M21 12L15 18.5L21 25" stroke="#192954" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button id="next-project" class="nav-btn next">
+                        <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5 0L34.5215 9.25V27.75L18.5 37L2.47853 27.75V9.25L18.5 0Z" fill="#192954" />
+                            <path d="M16 12L22 18.5L16 25" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- SMALL CARDS: Full-width 3-column grid -->
+                <div id="small-projects-grid" class="small-projects-grid reveal-fade-up">
+                    <!-- Content injected by JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta-section">
+
+            <!-- Layer 1: BG image as <img> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â desktop -->
+            <img src="assets/bg/cta-bg-hero.png" alt="" class="cta-bg-img cta-bg-desktop reveal-fade-up"
+                aria-hidden="true">
+            <!-- Layer 1b: BG image ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â mobile only -->
+            <img src="assets/bg/cta-bg-hero-mobile.png" alt="" class="cta-bg-img cta-bg-mobile" aria-hidden="true">
+
+            <!-- Layer 2: Polygon shape ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â right side -->
+            <img src="assets/bg/Polygon connect.png" alt="" class="cta-polygon reveal-fade-right" aria-hidden="true">
+
+            <!-- Layer 3: Content -->
+            <div class="container cta-container">
+
+                <!-- LEFT: Hero Text ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â top-left aligned -->
+                <div class="cta-text reveal-fade-left">
+                    <h2 class="cta-title">FIND YOUR<br>PERFECT SPACE TODAY</h2>
+                    <div class="accent-line-light"></div>
+                    <p class="cta-subtitle desktop-cta-subtitle">Exclusive Residences. Thoughtful Design.<br>Spaces that
+                        elevate the way you live</p>
+                    <p class="cta-subtitle mobile-cta-subtitle"
+                        style="font-size: 16px; font-weight: 400; line-height: 1.5; margin-bottom: 25px;">Discover
+                        thoughtfully designed developments in prime locations, built for those who expect more.</p>
+                </div>
+
+                <!-- RIGHT: Contact Form Card ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â exact Figma 519ÃƒÆ’Ã¢â‚¬â€645px -->
+                <div class="contact-form-card reveal-fade-right">
+                    <h3 class="form-heading">LET'S CONNECT</h3>
+                    <div class="form-heading-line"></div>
+                    <p class="form-subtext">Share a few details and our team will connect with you shortly.</p>
+                    <form id="consultation-form">
+                        <div class="form-group">
+                            <img src="assets/icons/profile.svg" alt="Name">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <img src="assets/icons/contact-call.svg" alt="Phone">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group fg-email">
+                            <img src="assets/icons/contact-mail.svg" alt="Email">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group fg-message">
+                            <img src="assets/icons/message.svg" alt="Message">
+                            <textarea placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn-consult">CONTACT US &rarr;</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <!-- Col 1: Brand -->
+            <div class="footer-col brand-col reveal-fade-up">
+                <img src="assets/logo/logo-footer.svg" alt="Lashkaria Group" class="footer-logo">
+                <div class="footer-iso-icons">
+                    <img src="assets/ISO/iso-9001-2015.png" alt="ISO 9001" class="iso-img">
+                    <img src="assets/ISO/iso-14001-2015.png" alt="ISO 14001" class="iso-img">
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.1s;">
+                <ul class="footer-links">
+                    <li><a href="#home">Home <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="projects.html">Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="#">Download Profile <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Col 3: Our Projects -->
+            <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.2s;">
+                <ul class="footer-links">
+                    <li><a href="projects.html#completed">Completed Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="projects.html#ongoing">Ongoing Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="projects.html">Upcoming Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="careers.html">Careers <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact Info -->
+            <div class="footer-col contact-col reveal-fade-up" style="transition-delay: 0.3s;">
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
+                        <p><a href="https://www.google.com/maps/dir/?api=1&destination=19.113575365657606,72.83949792334383"
+                                target="_blank">S. Lashkaria Group Unit no. 111, 1st Floor, Juhu Azad Nagar CHS, C.D.
+                                Barfiwala Road, Andheri (W), Mumbai 400053</a></p>
+                    </div>
+                    <div class="contact-divider"></div>
+                    <div class="contact-item">
+                        <img src="assets/icons/call.svg" alt="" class="contact-icon">
+                        <p>
+                            <a href="tel:+912226256875">+91 2226256875</a><br>
+                            <a href="tel:+912226256876">+91 2226256876</a>
+                        </p>
+                    </div>
+                    <div class="contact-divider"></div>
+                    <div class="contact-item">
+                        <img src="assets/icons/mail.svg" alt="" class="contact-icon">
+                        <p><a href="mailto:slashkariagroup@gmail.com">slashkariagroup@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom divider -->
+        <div class="container">
+            <div class="footer-bottom-line"></div>
+        </div>
+
+        <!-- Bottom Row: Copyright, Privacy, Credits, Socials -->
+        <div class="container footer-bottom-row reveal-fade-up">
+            <div class="footer-bottom-left">
+                <p class="copyright">@2026 S. Lashkaria Group. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <div class="legal-column">
+                        <a href="privacy.html" class="footer-sub-link">Privacy Policy</a>
+                        <a href="disclaimer.html" class="footer-sub-link">Disclaimer</a>
+                    </div>
+                    <div class="legal-column">
+                        <a href="terms.html" class="footer-sub-link">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz
+                    Nexora</a></p>
+
+            <div class="social-links">
+                <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
+                <!-- <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/projects.js"></script>
+    <script src="assets/js/hero-slider.js"></script>
+</body>
+
+</html>

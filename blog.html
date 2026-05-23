@@ -1,0 +1,537 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#192954">
+
+    <title>Blog | S. Lashkaria Group</title>
+    <meta name="description"
+        content="Stay updated with the latest news, insights, and architectural trends from S. Lashkaria Group.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo/header-logo1.svg" alt="Lashkaria Group Logo" id="logo-header">
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html#home" class="nav-link">HOME</a></li>
+                    <li><a href="about.html" class="nav-link">ABOUT US</a></li>
+                    <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li><a href="blog.html" class="nav-link active">INSIGHTS</a></li>
+                    <li><a href="careers.html" class="nav-link">CAREERS</a></li>
+                    <li class="mobile-nav-item"><a href="#" class="nav-link">Download Profile</a></li>
+                    <li class="mobile-nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" class="btn-outline-header">Download Profile</a>
+                <a href="contact.html" class="cta-button">
+                    <span>CONTACT US</span>
+                </a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-feed-main">
+        <!-- Blog Hero Section -->
+        <section class="projects-page-hero">
+            <div class="hero-bg-wrapper">
+                <img src="assets/bg/blog-herobg.jpeg" alt="Blog Hero" class="hero-image desktop-hero-bg">
+                <img src="assets/bg/blog-herobg-mobile.jpeg" alt="Blog Hero Mobile" class="hero-image mobile-hero-bg"
+                    style="display: none;">
+            </div>
+            <div class="container hero-container">
+                <div class="hero-content reveal-fade-up">
+                    <h1 class="projects-hero-title">INSIGHTS &<br>INNOVATION</h1>
+                    <p class="projects-hero-subtitle">Stay updated with the latest news, architectural trends,<br>and
+                        milestones from S. Lashkaria Group.</p>
+                </div>
+            </div>
+        </section>
+        <section class="blog-section">
+            <!-- HEXAGONS -->
+            <div class="hexagon hexagon-1"></div>
+            <div class="hexagon hexagon-2"></div>
+
+            <!-- FILTER -->
+            <div class="blog-filter reveal-fade-up">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="community">Community</button>
+                <button class="filter-btn" data-category="architecture">Architecture</button>
+                <button class="filter-btn" data-category="projects">Projects</button>
+                <button class="filter-btn" data-category="consultation">Consultation</button>
+            </div>
+
+            <!-- GRID -->
+            <div class="blog-grid">
+                <!-- CARD 1 -->
+                <div class="blog-card reveal-fade-up" data-category="community">
+                    <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">COMMUNITY</div>
+                    <h3 class="blog-title">Building Communities, Not Just Buildings</h3>
+                    <p class="blog-description">Good design goes beyond aesthetics. Itâ€™s about creating spaces that
+                        enhance the way people live.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Apr 28, 2025</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="blog-card reveal-fade-up" data-category="architecture" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">ARCHITECTURE</div>
+                    <h3 class="blog-title">Thoughtful Architecture For Modern Living</h3>
+                    <p class="blog-description">Spaces crafted with precision, functionality, and timeless aesthetics.
+                    </p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Apr 12, 2025</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="blog-card reveal-fade-up" data-category="projects" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">PROJECTS</div>
+                    <h3 class="blog-title">Creating Spaces Designed For The Future</h3>
+                    <p class="blog-description">Discover how modern developments are shaping urban lifestyles.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Mar 30, 2025</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="blog-card reveal-fade-up" data-category="consultation">
+                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">CONSULTATION</div>
+                    <h3 class="blog-title">Choosing The Right Property Investment</h3>
+                    <p class="blog-description">Key considerations every buyer should understand before investing.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Mar 18, 2025</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="blog-card reveal-fade-up" data-category="community" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">COMMUNITY</div>
+                    <h3 class="blog-title">Spaces Built Around Everyday Comfort</h3>
+                    <p class="blog-description">Developments thoughtfully planned to create better lifestyles.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Mar 04, 2025</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="blog-card reveal-fade-up" data-category="architecture" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">ARCHITECTURE</div>
+                    <h3 class="blog-title">Elevating Urban Living Through Design</h3>
+                    <p class="blog-description">A closer look at how design influences modern urban experiences.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Feb 21, 2025</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 7 -->
+                <div class="blog-card reveal-fade-up" data-category="projects">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">PROJECTS</div>
+                    <h3 class="blog-title">Developments Built For Long-Term Value</h3>
+                    <p class="blog-description">Smartly planned projects designed for future-ready living and investment
+                        growth.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Feb 12, 2025</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 8 -->
+                <div class="blog-card reveal-fade-up" data-category="consultation">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">CONSULTATION</div>
+                    <h3 class="blog-title">What Makes A Property Truly Premium</h3>
+                    <p class="blog-description">Understanding the fine details and amenities that define luxury modern
+                        living today.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Jan 28, 2025</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 9 -->
+                <div class="blog-card reveal-fade-up" data-category="community">
+                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">COMMUNITY</div>
+                    <h3 class="blog-title">Sustainable Living in Mumbai</h3>
+                    <p class="blog-description">How we are incorporating green spaces and eco-friendly features into our
+                        new developments.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Jan 15, 2025</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 10 -->
+                <div class="blog-card reveal-fade-up" data-category="architecture">
+                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">ARCHITECTURE</div>
+                    <h3 class="blog-title">The Evolution of Apartment Design</h3>
+                    <p class="blog-description">Exploring how floor plans have adapted to the needs of the modern
+                        work-from-home era.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Jan 05, 2025</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 11 -->
+                <div class="blog-card reveal-fade-up" data-category="projects">
+                    <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">PROJECTS</div>
+                    <h3 class="blog-title">New Landmarks on the Horizon</h3>
+                    <p class="blog-description">A sneak peek into our upcoming residential projects in prime Andheri
+                        West locations.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Dec 20, 2024</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 12 -->
+                <div class="blog-card reveal-fade-up" data-category="consultation">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">CONSULTATION</div>
+                    <h3 class="blog-title">Home Buying Guide for 2025</h3>
+                    <p class="blog-description">Everything you need to know about the current real estate market trends
+                        in Mumbai.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Dec 10, 2024</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 13 -->
+                <div class="blog-card reveal-fade-up" data-category="community">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">COMMUNITY</div>
+                    <h3 class="blog-title">Parks and Recreation in Mumbai</h3>
+                    <p class="blog-description">Discover the best green spaces near our latest residential projects.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Nov 28, 2024</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 14 -->
+                <div class="blog-card reveal-fade-up" data-category="architecture">
+                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">ARCHITECTURE</div>
+                    <h3 class="blog-title">Modern Kitchen Trends</h3>
+                    <p class="blog-description">How functional design is transforming the heart of the modern home.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Nov 15, 2024</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 15 -->
+                <div class="blog-card reveal-fade-up" data-category="projects">
+                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">PROJECTS</div>
+                    <h3 class="blog-title">Commercial Hubs of the Future</h3>
+                    <p class="blog-description">Exploring our latest office space developments in Mumbai's business
+                        districts.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Nov 02, 2024</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 16 -->
+                <div class="blog-card reveal-fade-up" data-category="consultation">
+                    <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">CONSULTATION</div>
+                    <h3 class="blog-title">Understanding Home Loans</h3>
+                    <p class="blog-description">A simple guide to interest rates, tenures, and choosing the right bank.
+                    </p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Oct 20, 2024</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 17 -->
+                <div class="blog-card reveal-fade-up" data-category="community">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">COMMUNITY</div>
+                    <h3 class="blog-title">The Joy of High-Rise Living</h3>
+                    <p class="blog-description">Why more people are choosing vertical living for safety and views.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Oct 10, 2024</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 18 -->
+                <div class="blog-card reveal-fade-up" data-category="architecture">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">ARCHITECTURE</div>
+                    <h3 class="blog-title">Minimalism in Urban Spaces</h3>
+                    <p class="blog-description">Achieving a sense of space through clever design and clean lines.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Sep 25, 2024</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 19 -->
+                <div class="blog-card reveal-fade-up" data-category="projects">
+                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">PROJECTS</div>
+                    <h3 class="blog-title">Restoring Mumbai's Heritage</h3>
+                    <p class="blog-description">Our approach to blending modern luxury with historical significance.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Sep 12, 2024</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 20 -->
+                <div class="blog-card reveal-fade-up" data-category="consultation">
+                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
+                        class="blog-image">
+                    <div class="blog-category">CONSULTATION</div>
+                    <h3 class="blog-title">Preparing for Your First Home Visit</h3>
+                    <p class="blog-description">Tips on what to look for when inspecting a potential property.</p>
+                    <div class="blog-bottom">
+                        <div class="blog-date">Aug 30, 2024</div>
+                        <a href="blog-view.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="pagination reveal-fade-up">
+                <button class="page-arrow">&#8592;</button>
+                <button class="page-number active-page">1</button>
+                <button class="page-number">2</button>
+                <button class="page-number">3</button>
+                <button class="page-number">4</button>
+                <button class="page-number">5</button>
+                <button class="page-arrow">&#8594;</button>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta-section">
+            <!-- Layer 1: BG image as <img> â€” same approach as hero, crisp & no blur -->
+            <img src="assets/bg/cta-bg.png" alt="" class="cta-bg-img" aria-hidden="true">
+            <!-- Layer 2: Polygon shape â€” right side -->
+            <img src="assets/bg/Polygon connect.png" alt="" class="cta-polygon" aria-hidden="true">
+
+            <div class="container cta-container">
+                <!-- LEFT: Hero Text â€” top-left aligned -->
+                <div class="cta-text reveal-fade-left">
+                    <h2 class="cta-title">FIND YOUR<br>PERFECT SPACE TODAY</h2>
+                    <div class="accent-line-light"></div>
+                    <p class="cta-subtitle">Exclusive Residences. Thoughtful Design.<br>Spaces that elevate the way you
+                        live</p>
+                </div>
+
+                <!-- RIGHT: Contact Form Card -->
+                <div class="contact-form-card reveal-fade-right">
+                    <h3 class="form-heading">LET'S CONNECT</h3>
+                    <div class="form-heading-line"></div>
+                    <p class="form-subtext">Share a few details and our team will connect with you shortly.</p>
+                    <form id="consultation-form">
+                        <div class="form-group">
+                            <img src="assets/icons/profile.svg" alt="Name">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <img src="assets/icons/contact-call.svg" alt="Phone">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group fg-email">
+                            <img src="assets/icons/contact-mail.svg" alt="Email">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group fg-message">
+                            <img src="assets/icons/message.svg" alt="Message">
+                            <textarea placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn-consult">CONTACT US &rarr;</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <!-- Col 1: Brand -->
+            <div class="footer-col brand-col reveal-fade-up">
+                <img src="assets/logo/logo-footer.svg" alt="Lashkaria Group" class="footer-logo">
+                <div class="footer-iso-icons">
+                    <img src="assets/ISO/iso-9001-2015.png" alt="ISO 9001" class="iso-img">
+                    <img src="assets/ISO/iso-14001-2015.png" alt="ISO 14001" class="iso-img">
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.1s;">
+                <ul class="footer-links">
+                    <li><a href="index.html#home">Home <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="projects.html">Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="#">Download Profile <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Our Projects -->
+            <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.2s;">
+                <ul class="footer-links">
+                    <li><a href="projects.html#completed">Completed Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="projects.html#ongoing">Ongoing Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="projects.html">Upcoming Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="careers.html">Careers <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact Info -->
+            <div class="footer-col contact-col reveal-fade-up" style="transition-delay: 0.3s;">
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
+                        <p><a href="https://www.google.com/maps/dir/?api=1&destination=19.113575365657606,72.83949792334383"
+                                target="_blank">S. Lashkaria Group Unit no. 111, 1st Floor, Juhu Azad Nagar CHS, C.D.
+                                Barfiwala Road, Andheri (W), Mumbai 400053</a></p>
+                    </div>
+                    <div class="contact-divider"></div>
+                    <div class="contact-item">
+                        <img src="assets/icons/call.svg" alt="" class="contact-icon">
+                        <p>
+                            <a href="tel:+912226256875">+91 2226256875</a><br>
+                            <a href="tel:+912226256876">+91 2226256876</a>
+                        </p>
+                    </div>
+                    <div class="contact-divider"></div>
+                    <div class="contact-item">
+                        <img src="assets/icons/mail.svg" alt="" class="contact-icon">
+                        <p><a href="mailto:slashkariagroup@gmail.com">slashkariagroup@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom divider -->
+        <div class="container">
+            <div class="footer-bottom-line"></div>
+        </div>
+
+        <!-- Bottom Row: Copyright, Privacy, Credits, Socials -->
+        <div class="container footer-bottom-row reveal-fade-up">
+            <div class="footer-bottom-left">
+                <p class="copyright">@2026 S. Lashkaria Group. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <div class="legal-column">
+                        <a href="privacy.html" class="footer-sub-link">Privacy Policy</a>
+                        <a href="disclaimer.html" class="footer-sub-link">Disclaimer</a>
+                    </div>
+                    <div class="legal-column">
+                        <a href="terms.html" class="footer-sub-link">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz
+                    Nexora</a></p>
+
+            <div class="social-links">
+                <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/blog.js"></script>
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | S. Lashkaria Group</title>
+    <meta name="description" content="Terms & Conditions for S. Lashkaria Group - Guidelines for using our website and services.">
+    <meta name="theme-color" content="#192954">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <style>
+        :root {
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F8FAFC;
+            --text-primary: #192954;
+            --accent: #c5a059;
+            --light-blue: #EBF5FF;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        /* --- Hero Section --- */
+        .policy-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .policy-hero-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero-text {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .policy-hero h1 {
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .last-updated {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .calendar-icon {
+            width: 18px;
+            height: 18px;
+            stroke: var(--text-primary);
+        }
+
+        .hero-watermark {
+            position: absolute;
+            right: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.15;
+            width: 500px;
+            height: auto;
+            pointer-events: none;
+            z-index: 1;
+            filter: grayscale(1);
+        }
+
+        .policy-intro {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 800px;
+            color: #4F4B4C;
+        }
+
+        /* --- Content Layout --- */
+        .policy-main {
+            padding: 100px 0;
+            background: var(--bg-primary);
+        }
+
+        .policy-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .policy-row {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 40px;
+            margin-bottom: 0;
+        }
+
+        .icon-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .icon-card {
+            width: 60px;
+            height: 60px;
+            background: var(--light-blue);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .icon-card svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--text-primary);
+        }
+
+        .track-line {
+            width: 2px;
+            background: var(--light-blue);
+            flex-grow: 1;
+            z-index: 1;
+        }
+
+        /* Remove track line from last item */
+        .policy-row:last-child .track-line {
+            display: none;
+        }
+
+        .policy-section {
+            padding-bottom: 60px;
+            scroll-margin-top: 100px;
+        }
+
+        .policy-section h2 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            line-height: 1.2;
+            padding-top: 15px;
+        }
+
+        .policy-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #4F4B4C;
+        }
+
+        /* --- Footer Callout --- */
+        .policy-footer-callout {
+            padding: 80px 0;
+            background: var(--bg-secondary);
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .contact-card-mini {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 30px;
+            background: #FFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .contact-card-mini svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--text-primary);
+        }
+
+        .contact-card-mini a {
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .update-terms-card {
+            background: var(--light-blue);
+            border: 1px solid rgba(25, 41, 84, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .update-terms-card h3 {
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        /* --- Mobile Styles --- */
+        @media (max-width: 992px) {
+            .policy-hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text {
+                max-width: 100%;
+            }
+            .last-updated {
+                justify-content: center;
+            }
+            .policy-intro {
+                margin: 0 auto;
+            }
+            .hero-watermark {
+                display: none;
+            }
+
+            .policy-row {
+                display: grid;
+                grid-template-columns: 48px 1fr;
+                gap: 16px;
+                padding: 24px 20px;
+                background: #FFF;
+                border-radius: 12px;
+                margin-bottom: 20px;
+                border-left: 4px solid var(--text-primary);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+                align-items: start;
+            }
+
+            .icon-col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .icon-card {
+                width: 36px;
+                height: 36px;
+                border-radius: 8px;
+                background: var(--light-blue);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .icon-card svg {
+                width: 20px;
+                height: 20px;
+                fill: var(--text-primary);
+            }
+
+            .track-line {
+                display: none;
+            }
+
+            .policy-section {
+                padding: 0;
+                background: transparent;
+                border-radius: 0;
+                margin-bottom: 0;
+                border-left: none;
+                box-shadow: none;
+            }
+
+            .policy-section h2 {
+                padding-top: 5px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 20px;
+            }
+
+            .policy-section h2::before {
+                display: none;
+            }
+
+            .contact-row {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo/header-logo1.svg" alt="Lashkaria Group Logo" id="logo-header">
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html#home" class="nav-link">HOME</a></li>
+                    <li><a href="about.html" class="nav-link">ABOUT US</a></li>
+                    <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li><a href="blog.html" class="nav-link">INSIGHTS</a></li>
+                    <li><a href="careers.html" class="nav-link">CAREERS</a></li>
+                    <li class="mobile-nav-item"><a href="#" class="nav-link">Download Profile</a></li>
+                    <li class="mobile-nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-outline-header">Download Profile</a>
+                <a href="contact.html" class="cta-button"><span>CONTACT US</span></a>
+            </div>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="policy-hero">
+            <div class="container policy-hero-container">
+                <div class="hero-text reveal-fade-left">
+                    <div class="last-updated">
+                        <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Last Updated: May 16, 2026
+                    </div>
+                    <h1>Terms & Conditions</h1>
+                    <p class="policy-intro">Welcome to www.slashkariagroup.com. By continuing to browse and use this website, or any linked pages, you accept and agree to follow these Terms &amp; Conditions fully and without limitation.</p>
+                </div>
+                
+                <!-- Footer Logo Watermark -->
+                <img src="assets/logo/logo-footer.svg" alt="" class="hero-watermark">
+            </div>
+        </section>
+
+        <!-- Structured Content -->
+        <section class="policy-main">
+            <div class="container policy-container">
+                
+                <!-- Row 1 -->
+                <div class="policy-row">
+                    <div class="icon-col">
+                        <div class="icon-card reveal-fade-up">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                        </div>
+                        <div class="track-line"></div>
+                    </div>
+                    <div class="policy-section reveal-fade-up">
+                        <h2>1. Website Use and &ldquo;As-Is&rdquo; Disclaimer</h2>
+                        <p>This website and all its contents are provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis, including any potential errors or faults. Your use of this platform is entirely at your own risk. Nothing published on this site establishes a new warranty or expands the scope of any existing legal warranties that cannot be disclaimed by law.</p>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="policy-row">
+                    <div class="icon-col">
+                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.1s;">
+                            <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                        </div>
+                        <div class="track-line"></div>
+                    </div>
+                    <div class="policy-section reveal-fade-up" style="transition-delay: 0.1s;">
+                        <h2>2. Information and Modifications</h2>
+                        <p>The content on this website is intended for general guidance only and does not constitute a formal offer or a binding contract. Architectural designs, layouts, and technical specifications can be altered without prior notice. Any digital renderings, illustrations, or computer-generated images are strictly artist impressions meant to serve as an indicator of the final product. The company maintains the right to modify, add, or remove any content from this website at any moment. Furthermore, these terms may be updated at any time without direct notification. You are bound by these revisions and should review this page regularly.</p>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="policy-row">
+                    <div class="icon-col">
+                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.2s;">
+                            <svg viewBox="0 0 24 24"><path d="M12 3L4 9v12h16V9l-8-6zm2 16h-4v-6h4v6z"/></svg>
+                        </div>
+                        <div class="track-line"></div>
+                    </div>
+                    <div class="policy-section reveal-fade-up" style="transition-delay: 0.2s;">
+                        <h2>3. Verification of Details</h2>
+                        <p>All promotional materials, apartment features, project specifications, and amenities listed here are provided solely for your convenience. Because this data might not reflect the absolute latest updates, you must independently verify all details&mdash;including square footage, services, payment structures, and sales terms&mdash;with our official sales team before making any purchasing decisions. Until website details are completely updated, the information presented here should not be interpreted as an official advertisement. To get the most accurate and current project details, please call or visit our sales office during regular business hours to speak with a representative.</p>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="policy-row">
+                    <div class="icon-col">
+                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.3s;">
+                            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                        </div>
+                        <div class="track-line"></div>
+                    </div>
+                    <div class="policy-section reveal-fade-up" style="transition-delay: 0.3s;">
+                        <h2>4. Professional Advice Disclaimer</h2>
+                        <p>All information found under the &ldquo;Buyers Guide&rdquo; or &ldquo;Blogs&rdquo; sections is meant purely for informational purposes. It should not be treated as a substitute for professional legal, real estate, financial, or accounting advice. You should not make decisions, or refrain from taking action, based on this website&rsquo;s content without first consulting a qualified professional advisor. Every real estate transaction is distinct, requiring careful personal diligence and prudence.</p>
+                    </div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="policy-row">
+                    <div class="icon-col">
+                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.4s;">
+                            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                        </div>
+                        <div class="track-line"></div>
+                    </div>
+                    <div class="policy-section reveal-fade-up" style="transition-delay: 0.4s;">
+                        <h2>5. Limitation of Liability</h2>
+                        <p>While we make every effort to ensure the accuracy of our online content, the company holds no liability for user claims or cancellation requests stemming from inaccuracies found on this website. Under no circumstances will the company be held liable for any costs, losses, or damages&mdash;including indirect or consequential damages, or loss of data&mdash;resulting from or connected to the use of this website.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer Callout -->
+        <section class="policy-footer-callout">
+            <div class="container">
+                <div class="contact-row reveal-fade-up">
+                    <div class="contact-card-mini">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.18-2.18a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <a href="tel:+912226256875">+91 2226256875</a>
+                    </div>
+                    <div class="contact-card-mini">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <a href="mailto:slashkariagroup@gmail.com">slashkariagroup@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="update-terms-card reveal-fade-up" style="transition-delay: 0.2s;">
+                    <h3>Agreement Confirmation</h3>
+                    <p>Accessing our services implies full agreement to these terms. For specific commercial queries, please contact our legal department directly.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <!-- Col 1: Brand -->
+            <div class="footer-col brand-col reveal-fade-up">
+                <img src="assets/logo/logo-footer.svg" alt="Lashkaria Group" class="footer-logo">
+                <div class="footer-iso-icons">
+                    <img src="assets/ISO/iso-9001-2015.png" alt="ISO 9001" class="iso-img">
+                    <img src="assets/ISO/iso-14001-2015.png" alt="ISO 14001" class="iso-img">
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.1s;">
+                <ul class="footer-links">
+                    <li><a href="index.html#home">Home <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="projects.html">Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="#">Download Profile <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Our Projects -->
+            <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.2s;">
+                <ul class="footer-links">
+                    <li><a href="projects.html#completed">Completed Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="projects.html#ongoing">Ongoing Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="projects.html">Upcoming Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="careers.html">Careers <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact Info -->
+            <div class="footer-col contact-col reveal-fade-up" style="transition-delay: 0.3s;">
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
+                        <p><a href="https://www.google.com/maps/dir/?api=1&destination=19.113575365657606,72.83949792334383"
+                                target="_blank">S. Lashkaria Group Unit no. 111, 1st Floor, Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri (W), Mumbai 400053</a></p>
+                    </div>
+                    <div class="contact-divider"></div>
+                    <div class="contact-item">
+                        <img src="assets/icons/call.svg" alt="" class="contact-icon">
+                        <p>
+                            <a href="tel:+912226256875">+91 2226256875</a><br>
+                            <a href="tel:+912226256876">+91 2226256876</a>
+                        </p>
+                    </div>
+                    <div class="contact-divider"></div>
+                    <div class="contact-item">
+                        <img src="assets/icons/mail.svg" alt="" class="contact-icon">
+                        <p><a href="mailto:slashkariagroup@gmail.com">slashkariagroup@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom divider -->
+        <div class="container">
+            <div class="footer-bottom-line"></div>
+        </div>
+
+        <!-- Bottom Row: Copyright, Privacy, Credits, Socials -->
+        <div class="container footer-bottom-row reveal-fade-up">
+            <div class="footer-bottom-left">
+                <p class="copyright">@2026 S. Lashkaria Group. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <div class="legal-column">
+                        <a href="privacy.html" class="footer-sub-link">Privacy Policy</a>
+                        <a href="disclaimer.html" class="footer-sub-link">Disclaimer</a>
+                    </div>
+                    <div class="legal-column">
+                        <a href="terms.html" class="footer-sub-link">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz Nexora</a></p>
+
+            <div class="social-links">
+                <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+
+</html>
+
+
+
+
