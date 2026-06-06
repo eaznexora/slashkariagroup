@@ -851,16 +851,55 @@
 
         resumeForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for your interest! Your application has been submitted successfully.');
-            modal.classList.remove('active');
-            resumeForm.reset();
-            fileNameDisplay.textContent = 'No file chosen';
+            const btn = resumeForm.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Submitting...';
+            btn.disabled = true;
+
+            const payload = { formType: 'careers' };
+            const inputs = resumeForm.querySelectorAll('input, textarea, select');
+            
+            inputs.forEach(input => {
+                if (input.placeholder === 'Full Name') payload['Full Name'] = input.value;
+                if (input.placeholder === 'Phone Number') payload['Phone Number'] = input.value;
+                if (input.placeholder === 'Your Email') payload['Your Email'] = input.value;
+                if (input.id === 'jobPositionInput') payload['Applying For'] = input.value;
+                if (input.id === 'experienceInput') payload['Total Experience'] = input.options[input.selectedIndex].text;
+                if (input.id === 'noticePeriodInput') payload['Notice Period'] = input.options[input.selectedIndex].text;
+                if (input.placeholder === 'Expected CTC (LPA)') payload['Expected CTC'] = input.value;
+                if (input.tagName.toLowerCase() === 'textarea') payload['Brief Cover Note'] = input.value;
+            });
+            
+            if (fileInput.files.length > 0) {
+                payload['Resume Link'] = fileInput.files[0].name;
+            }
+
+            const googleWebAppUrl = 'https://script.google.com/macros/s/AKfycbzQY7bVWT6lJiF9Dm_M6ux_E8ysMK_z5oHAf0rV-eCRKgWSk03EDUulNYKvaYiPNPf-Dw/exec';
+
+            fetch(googleWebAppUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(() => {
+                if (window.showSuccessModal) {
+                    window.showSuccessModal('Your application has been submitted successfully.');
+                } else {
+                    alert('Your application has been submitted successfully.');
+                }
+                modal.classList.remove('active');
+                resumeForm.reset();
+                fileNameDisplay.textContent = 'No file chosen';
+            }).catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }).finally(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            });
         });
     </script>
 </body>
-
-</html>
-
 
 
 

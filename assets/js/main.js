@@ -30,7 +30,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form Submission Handling
+    // Global Success Modal Injection
+    const showSuccessModal = (message) => {
+        let modal = document.getElementById('global-success-modal');
+        if (!modal) {
+            const modalHtml = `
+                <div id="global-success-modal" style="position: fixed; inset: 0; z-index: 99999; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); opacity: 0; pointer-events: none; transition: opacity 0.3s ease;">
+                    <div style="background: white; padding: 40px; border-radius: 12px; max-width: 400px; width: 90%; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.2); transform: translateY(20px); transition: transform 0.3s ease;">
+                        <div style="width: 60px; height: 60px; background: #10B981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <h3 style="font-family: 'Mulish', sans-serif; font-size: 24px; font-weight: 800; color: #192954; margin-bottom: 10px;">Success!</h3>
+                        <p id="global-success-message" style="font-family: 'Mulish', sans-serif; font-size: 16px; color: #64748B; margin-bottom: 25px; line-height: 1.5;"></p>
+                        <button id="close-success-modal" style="background: #192954; color: white; border: none; padding: 12px 30px; border-radius: 6px; font-family: 'Mulish', sans-serif; font-weight: 700; font-size: 16px; cursor: pointer; transition: background 0.3s ease;">Got it</button>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
+            modal = document.getElementById('global-success-modal');
+            document.getElementById('close-success-modal').addEventListener('click', () => {
+                modal.style.opacity = '0';
+                modal.style.pointerEvents = 'none';
+                modal.children[0].style.transform = 'translateY(20px)';
+            });
+        }
+        document.getElementById('global-success-message').innerText = message;
+        modal.style.opacity = '1';
+        modal.style.pointerEvents = 'auto';
+        modal.children[0].style.transform = 'translateY(0)';
+    };
+
+    window.showSuccessModal = showSuccessModal; // Expose globally for careers.html
+
+    const googleWebAppUrl = 'https://script.google.com/macros/s/AKfycbzQY7bVWT6lJiF9Dm_M6ux_E8ysMK_z5oHAf0rV-eCRKgWSk03EDUulNYKvaYiPNPf-Dw/exec';
+
+    // 1. Global Consultation Form
     const consultationForm = document.getElementById('consultation-form');
     if (consultationForm) {
         consultationForm.addEventListener('submit', (e) => {
@@ -39,14 +73,75 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalText = btn.innerHTML;
             btn.innerHTML = 'Sending...';
             btn.disabled = true;
+
+            const inputs = consultationForm.querySelectorAll('input, textarea');
+            const payload = { formType: 'consultation' };
             
-            setTimeout(() => {
-                alert('Thank you! Our team will connect with you shortly.');
+            inputs.forEach(input => {
+                if (input.placeholder && input.placeholder.includes('Full Name')) payload['Full Name'] = input.value;
+                if (input.placeholder && input.placeholder.includes('Phone')) payload['Phone Number'] = input.value;
+                if (input.placeholder && input.placeholder.includes('Email')) payload['Your Email'] = input.value;
+                if (input.tagName.toLowerCase() === 'textarea') payload['Your Message'] = input.value;
+            });
+
+            fetch(googleWebAppUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(() => {
+                showSuccessModal('Thank you! Our team will connect with you shortly.');
                 consultationForm.reset();
+            }).catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }).finally(() => {
                 btn.innerHTML = originalText;
                 btn.disabled = false;
-            }, 1500);
+            });
         });
+    }
+
+    // 2. Contact Page Enquiry Form
+    const enquiryFormContainer = document.getElementById('enquiry-form');
+    if (enquiryFormContainer) {
+        const enquiryForm = enquiryFormContainer.querySelector('form');
+        if (enquiryForm) {
+            enquiryForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = enquiryForm.querySelector('button');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Sending...';
+                btn.disabled = true;
+
+                const payload = { formType: 'enquiry' };
+                const inputs = enquiryForm.querySelectorAll('input, textarea, select');
+                
+                inputs.forEach(input => {
+                    if (input.placeholder === 'Full Name') payload['Full Name'] = input.value;
+                    if (input.placeholder === 'Phone Number') payload['Phone Number'] = input.value;
+                    if (input.placeholder === 'Email Address') payload['Email Address'] = input.value;
+                    if (input.tagName.toLowerCase() === 'select') payload['Interested Project'] = input.options[input.selectedIndex].text;
+                    if (input.tagName.toLowerCase() === 'textarea') payload['Message'] = input.value;
+                });
+
+                fetch(googleWebAppUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                }).then(() => {
+                    showSuccessModal('Your enquiry has been submitted successfully.');
+                    enquiryForm.reset();
+                }).catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                }).finally(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                });
+            });
+        }
     }
 
     // Active Link Highlighting - Removed to keep 'HOME' active on index page
