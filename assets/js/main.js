@@ -273,15 +273,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         <form id="brochure-download-form">
                             <div class="form-group">
                                 <img src="assets/icons/profile.svg" alt="Name">
-                                <input type="text" name="name" placeholder="Full Name" required>
+                                <input type="text" name="Full Name" placeholder="Full Name" required>
                             </div>
                             <div class="form-group">
                                 <img src="assets/icons/contact-call.svg" alt="Phone">
-                                <input type="tel" name="phone" placeholder="Phone Number" required>
+                                <input type="tel" name="Phone Number" placeholder="Phone Number" required>
                             </div>
                             <div class="form-group">
                                 <img src="assets/icons/contact-mail.svg" alt="Email">
-                                <input type="email" name="email" placeholder="Your Email" required>
+                                <input type="email" name="Your Email" placeholder="Your Email" required>
                             </div>
                             <button type="submit" class="btn btn-solid-dark" style="width: 100%; height: 54px; margin-top: 10px; justify-content: center;">
                                 DOWNLOAD NOW &rarr;
@@ -317,26 +317,49 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Trigger Download
-            const downloadLink = document.createElement('a');
-            downloadLink.href = 'S. Lashkaria Group Brochure.pdf';
-            downloadLink.download = 'S. Lashkaria Group Brochure.pdf';
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            document.body.removeChild(downloadLink);
-
-            // Feedback & Close
             const submitBtn = form.querySelector('button');
             const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = 'Downloading...';
+            submitBtn.innerHTML = 'Processing...';
             submitBtn.disabled = true;
 
-            setTimeout(() => {
+            const payload = { formType: 'brochure' };
+            const inputs = form.querySelectorAll('input');
+            inputs.forEach(input => {
+                if (input.placeholder === 'Full Name') payload['Full Name'] = input.value;
+                if (input.placeholder === 'Phone Number') payload['Phone Number'] = input.value;
+                if (input.placeholder === 'Your Email') payload['Your Email'] = input.value;
+            });
+
+            const googleWebAppUrl = 'https://script.google.com/macros/s/AKfycbzQY7bVWT6lJiF9Dm_M6ux_E8ysMK_z5oHAf0rV-eCRKgWSk03EDUulNYKvaYiPNPf-Dw/exec';
+
+            fetch(googleWebAppUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(payload).toString()
+            }).then(() => {
+                // Trigger Download after successful logging
+                const downloadLink = document.createElement('a');
+                downloadLink.href = 'S. Lashkaria Group Brochure.pdf';
+                downloadLink.download = 'S. Lashkaria Group Brochure.pdf';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+
+                if (window.showSuccessModal) {
+                    window.showSuccessModal('Your brochure is downloading automatically.');
+                } else {
+                    alert('Your brochure is downloading automatically.');
+                }
                 modal.classList.remove('active');
                 form.reset();
+            }).catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }).finally(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-            }, 2000);
+            });
         });
     };
 
