@@ -747,23 +747,23 @@
                             <div class="career-form-grid">
                             <div class="form-group">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="#7D7979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 21px; height: 21px; flex-shrink: 0; opacity: 0.8;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                <input type="text" placeholder="Full Name" required>
+                                <input type="text" name="Full Name" placeholder="Full Name" required>
                             </div>
                             <div class="form-group">
                                 <img src="assets/icons/contact-call.svg" alt="Phone">
-                                <input type="tel" placeholder="Phone Number" required>
+                                <input type="tel" name="Phone Number" placeholder="Phone Number" required>
                             </div>
                             <div class="form-group">
                                 <img src="assets/icons/contact-mail.svg" alt="Email">
-                                <input type="email" placeholder="Your Email" required>
+                                <input type="email" name="Your Email" placeholder="Your Email" required>
                             </div>
                             <div class="form-group">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="#7D7979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 21px; height: 21px; flex-shrink: 0; opacity: 0.8;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                                <input type="text" id="jobPositionInput" placeholder="Applying For" readonly style="background: rgba(0, 0, 0, 0.03); cursor: not-allowed; font-weight: 700; color: #192954;">
+                                <input type="text" id="jobPositionInput" name="Applying For" placeholder="Applying For" readonly style="background: rgba(0, 0, 0, 0.03); cursor: not-allowed; font-weight: 700; color: #192954;">
                             </div>
                             <div class="form-group">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="#7D7979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 21px; height: 21px; flex-shrink: 0; opacity: 0.8;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                <select id="experienceInput" required style="flex: 1; border: none; outline: none; background: transparent; font-family: 'Mulish', sans-serif; font-size: 20px; font-weight: 500; color: #7A7979; appearance: none; -webkit-appearance: none;">
+                                <select name="Total Experience" id="experienceInput" required style="flex: 1; border: none; outline: none; background: transparent; font-family: 'Mulish', sans-serif; font-size: 20px; font-weight: 500; color: #7A7979; appearance: none; -webkit-appearance: none;">
                                     <option value="" disabled selected>Total Experience</option>
                                     <option value="Fresher">Fresher / Entry Level</option>
                                     <option value="1-3 Years">1 - 3 Years</option>
@@ -775,7 +775,7 @@
                             </div>
                             <div class="form-group">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="#7D7979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 21px; height: 21px; flex-shrink: 0; opacity: 0.8;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                <select id="noticePeriodInput" required style="flex: 1; border: none; outline: none; background: transparent; font-family: 'Mulish', sans-serif; font-size: 20px; font-weight: 500; color: #7A7979; appearance: none; -webkit-appearance: none;">
+                                <select name="Notice Period" id="noticePeriodInput" required style="flex: 1; border: none; outline: none; background: transparent; font-family: 'Mulish', sans-serif; font-size: 20px; font-weight: 500; color: #7A7979; appearance: none; -webkit-appearance: none;">
                                     <option value="" disabled selected>Notice Period</option>
                                     <option value="Immediate">Immediate</option>
                                     <option value="15 Days">15 Days</option>
@@ -787,11 +787,11 @@
                             </div>
                             <div class="form-group form-full">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="#7D7979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 21px; height: 21px; flex-shrink: 0; opacity: 0.8;"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                                <input type="text" placeholder="Expected CTC (LPA)" required>
+                                <input type="text" name="Expected CTC" placeholder="Expected CTC (LPA)" required>
                             </div>
                             <div class="form-group form-full" style="align-items: flex-start; padding: 12px 20px;">
                                 <img src="assets/icons/message.svg" alt="Message" style="margin-top: 4px;">
-                                <textarea placeholder="Brief Cover Note / Message" rows="3" style="flex: 1; border: none; outline: none; background: transparent; font-family: 'Mulish', sans-serif; font-size: 20px; font-weight: 500; color: #7A7979; resize: none;"></textarea>
+                                <textarea name="Brief Cover Note" placeholder="Brief Cover Note / Message" rows="3" style="flex: 1; border: none; outline: none; background: transparent; font-family: 'Mulish', sans-serif; font-size: 20px; font-weight: 500; color: #7A7979; resize: none;"></textarea>
                             </div>
                             <div class="form-group form-full" style="border: 2px dashed #EDEDED; padding: 25px; text-align: center; border-radius: 12px; background: #F9FAFB; transition: border-color 0.3s ease;">
                                 <label for="resumeFile" style="cursor: pointer; display: block;">
