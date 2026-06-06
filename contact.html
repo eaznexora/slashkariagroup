@@ -176,8 +176,8 @@
                             SEND US A MESSAGE</h2>
                         <form class="space-y-6">
                             <div class="grid md:grid-cols-2 gap-6">
-                                <input type="text" name="Full Name" placeholder="Full Name" class="input-field" required>
-                                <input type="tel" name="Phone Number" placeholder="Phone Number" class="input-field" required>
+                                <input type="text" name="Full Name" onkeypress="return /[a-zA-Z\\s]/i.test(event.key)" title="Name should only contain letters and spaces (e.g., John Doe)" pattern="^[A-Za-z\\s]{2,50}$" placeholder="Full Name" class="input-field" required>
+                                <input type="tel" name="Phone Number" onkeypress="return /[0-9]/i.test(event.key)" title="Please enter a valid phone number (digits only)" pattern="^[0-9]{10,12}$" placeholder="Phone Number" class="input-field" required>
                             </div>
                             <input type="email" name="Email Address" placeholder="Email Address" class="input-field" required>
                             <select name="Interested Project" class="input-field appearance-none">

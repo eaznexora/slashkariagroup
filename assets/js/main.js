@@ -273,11 +273,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         <form id="brochure-download-form">
                             <div class="form-group">
                                 <img src="assets/icons/profile.svg" alt="Name">
-                                <input type="text" name="Full Name" placeholder="Full Name" required>
+                                <input type="text" name="Full Name" onkeypress="return /[a-zA-Z\\s]/i.test(event.key)" title="Name should only contain letters and spaces (e.g., John Doe)" pattern="^[A-Za-z\\s]{2,50}$" placeholder="Full Name" required>
                             </div>
                             <div class="form-group">
                                 <img src="assets/icons/contact-call.svg" alt="Phone">
-                                <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+                                <input type="tel" name="Phone Number" onkeypress="return /[0-9]/i.test(event.key)" title="Please enter a valid phone number (digits only)" pattern="^[0-9]{10,12}$" placeholder="Phone Number" required>
                             </div>
                             <div class="form-group">
                                 <img src="assets/icons/contact-mail.svg" alt="Email">

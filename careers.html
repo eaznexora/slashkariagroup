@@ -747,11 +747,11 @@
                             <div class="career-form-grid">
                             <div class="form-group">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="#7D7979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 21px; height: 21px; flex-shrink: 0; opacity: 0.8;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                <input type="text" name="Full Name" placeholder="Full Name" required>
+                                <input type="text" name="Full Name" onkeypress="return /[a-zA-Z\\s]/i.test(event.key)" title="Name should only contain letters and spaces (e.g., John Doe)" pattern="^[A-Za-z\\s]{2,50}$" placeholder="Full Name" required>
                             </div>
                             <div class="form-group">
                                 <img src="assets/icons/contact-call.svg" alt="Phone">
-                                <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+                                <input type="tel" name="Phone Number" onkeypress="return /[0-9]/i.test(event.key)" title="Please enter a valid phone number (digits only)" pattern="^[0-9]{10,12}$" placeholder="Phone Number" required>
                             </div>
                             <div class="form-group">
                                 <img src="assets/icons/contact-mail.svg" alt="Email">
