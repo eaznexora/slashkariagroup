@@ -5349,3 +5349,66 @@ header.scrolled .logo img {
         height: 80px;
     }
 }
+
+/* Legal Consent Checkbox Tailwind Utility Fallbacks */
+.flex {
+    display: flex;
+}
+.items-start {
+    align-items: flex-start;
+}
+.gap-2 {
+    gap: 0.5rem;
+}
+.my-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.text-left {
+    text-align: left;
+}
+.w-4 {
+    width: 1rem !important;
+}
+.h-4 {
+    height: 1rem !important;
+}
+.mt-1 {
+    margin-top: 0.25rem !important;
+}
+.rounded {
+    border-radius: 0.25rem;
+}
+.border-gray-300 {
+    border-color: #d1d5db;
+}
+.text-slate-800 {
+    color: #1e293b;
+}
+.accent-slate-800 {
+    accent-color: #1e293b;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.text-xs {
+    font-size: 0.75rem;
+}
+.text-gray-600 {
+    color: #4b5563;
+}
+.leading-normal {
+    line-height: 1.5;
+}
+.select-none {
+    user-select: none;
+}
+.underline {
+    text-decoration: underline;
+}
+.hover\:text-slate-900:hover {
+    color: #0f172a;
+}
+.font-medium {
+    font-weight: 500;
+}

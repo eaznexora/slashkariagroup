@@ -283,6 +283,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <img src="assets/icons/contact-mail.svg" alt="Email">
                                 <input type="email" name="Your Email" placeholder="Your Email" required>
                             </div>
+                            <div class="flex items-start gap-2 my-4 text-left">
+                                <input type="checkbox" required name="Consent Checkbox" id="consent-main-brochure" class="w-4 h-4 mt-1 rounded border-gray-300 text-slate-800 focus:ring-slate-500 accent-slate-800 cursor-pointer">
+                                <label for="consent-main-brochure" class="text-xs text-gray-600 leading-normal select-none cursor-pointer">
+                                    I have read and accepted the <a href="terms.html" class="text-slate-800 underline hover:text-slate-900 font-medium">Terms & Conditions</a> and <a href="privacy.html" class="text-slate-800 underline hover:text-slate-900 font-medium">Privacy Policy</a>. I agree that the S. Lashkaria Group team can reach out on WhatsApp, RCS, Call or Email.
+                                </label>
+                            </div>
                             <button type="submit" class="btn btn-solid-dark" style="width: 100%; height: 54px; margin-top: 10px; justify-content: center;">
                                 DOWNLOAD NOW &rarr;
                             </button>
@@ -316,6 +322,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+            const consentCheckbox = form.querySelector('input[name="Consent Checkbox"]');
+            if (consentCheckbox && !consentCheckbox.checked) {
+                return;
+            }
             
             const submitBtn = form.querySelector('button');
             const originalText = submitBtn.innerHTML;
