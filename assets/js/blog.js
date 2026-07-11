@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const clickableElements = document.querySelectorAll('.read-more-btn, .blog-image');
     clickableElements.forEach(el => {
         el.addEventListener('click', (e) => {
+            e.preventDefault();
             // Find the parent card
             const card = el.closest('.blog-card');
             if (card) {
@@ -119,6 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const category = card.querySelector('.blog-category').innerText;
                 const date = card.querySelector('.blog-date').innerText;
                 const imgSrc = card.querySelector('.blog-image').getAttribute('src');
+                const readMoreLink = card.querySelector('.read-more-btn');
+                const href = readMoreLink ? readMoreLink.getAttribute('href') : 'blog-view.html';
                 
                 const postData = {
                     title: title,
@@ -128,11 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
                 
                 sessionStorage.setItem('currentBlogPost', JSON.stringify(postData));
-                
-                // If it's an image or image wrapper, manually redirect
-                if (el.classList.contains('blog-image') || el.classList.contains('img-wrapper')) {
-                    window.location.href = 'blog-view.html';
-                }
+                window.location.href = href;
             }
         });
     });

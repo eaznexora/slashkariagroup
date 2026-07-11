@@ -180,12 +180,27 @@
                                 <input type="tel" name="Phone Number" onkeypress="return /[0-9]/i.test(event.key)" title="Please enter a valid phone number (digits only)" pattern="^[0-9]{10,12}$" placeholder="Phone Number" class="input-field" required>
                             </div>
                             <input type="email" name="Email Address" placeholder="Email Address" class="input-field" required>
-                            <select name="Interested Project" class="input-field appearance-none">
-                                <option value="" disabled selected>Interested Project</option>
-                                <option value="solitaire">S. Lashkaria Solitaire</option>
-                                <option value="heights">Rashmi Heights</option>
-                                <option value="other">Other Projects</option>
-                            </select>
+                            <div class="relative">
+                                <!-- Hidden input for form submission -->
+                                <input type="hidden" name="Interested Project" id="selected-project" value="" required>
+                                
+                                <!-- Trigger button -->
+                                <button type="button" id="dropdown-trigger" class="w-full px-4 py-3 bg-white border border-brandNavy text-slate-800 rounded-md focus:outline-none focus:ring-1 focus:ring-brandNavy flex items-center justify-between cursor-pointer pr-10 transition-all duration-200">
+                                    <span id="dropdown-trigger-text" class="text-gray-400">Interested Project</span>
+                                    <span class="absolute inset-y-0 right-0 flex items-center px-4 text-brandNavy">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </span>
+                                </button>
+                                
+                                <!-- Floating Dropdown List -->
+                                <div id="dropdown-list" class="absolute left-0 right-0 mt-2 bg-white border border-gray-200 shadow-xl rounded-xl z-50 hidden transition-all duration-200">
+                                    <div class="w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-slate-50 hover:text-slate-900 first:rounded-t-xl last:rounded-b-xl cursor-pointer transition-colors" data-value="solitaire">S. Lashkaria Solitaire</div>
+                                    <div class="w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-slate-50 hover:text-slate-900 first:rounded-t-xl last:rounded-b-xl cursor-pointer transition-colors" data-value="heights">Rashmi Heights</div>
+                                    <div class="w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-slate-50 hover:text-slate-900 first:rounded-t-xl last:rounded-b-xl cursor-pointer transition-colors" data-value="other">Other Projects</div>
+                                </div>
+                            </div>
                             <textarea name="Message" placeholder="Message" rows="5" class="input-field"></textarea>
                             <div class="flex items-start gap-2 my-4 text-left">
                                 <input type="checkbox" required name="Consent Checkbox" id="consent-contact-enquiry" class="w-4 h-4 mt-1 rounded border-gray-300 text-slate-800 focus:ring-slate-500 accent-slate-800 cursor-pointer">
@@ -494,7 +509,69 @@
         });
     </script>
     <script>lucide.createIcons();</script>
-    <script src="assets/js/main.js"></script>
+    <script>
+        (function() {
+            function initDropdown() {
+                const trigger = document.getElementById('dropdown-trigger');
+                const list = document.getElementById('dropdown-list');
+                const hiddenInput = document.getElementById('selected-project');
+                const triggerText = document.getElementById('dropdown-trigger-text');
+                const form = document.querySelector('form');
+
+                if (trigger && list && hiddenInput && triggerText) {
+                    // Toggle list open/close
+                    trigger.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        list.classList.toggle('hidden');
+                        trigger.style.borderColor = '#192954'; // Reset border on click
+                    });
+
+                    // Selection handling via event delegation
+                    list.addEventListener('click', (e) => {
+                        const option = e.target.closest('[data-value]');
+                        if (option) {
+                            e.stopPropagation();
+                            const text = option.textContent.trim();
+                            
+                            hiddenInput.value = text;
+                            triggerText.textContent = text;
+                            triggerText.classList.remove('text-gray-400');
+                            triggerText.classList.add('text-slate-800');
+                            
+                            list.classList.add('hidden');
+                            trigger.style.borderColor = '#192954'; // Reset border
+                        }
+                    });
+
+                    // Close when clicking outside
+                    document.addEventListener('click', (e) => {
+                        if (!trigger.contains(e.target) && !list.contains(e.target)) {
+                            list.classList.add('hidden');
+                        }
+                    });
+
+                    // Form submit validation
+                    if (form) {
+                        form.addEventListener('submit', (e) => {
+                            if (!hiddenInput.value) {
+                                e.preventDefault();
+                                e.stopImmediatePropagation();
+                                trigger.style.borderColor = '#ef4444';
+                                trigger.focus();
+                            }
+                        });
+                    }
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initDropdown);
+            } else {
+                initDropdown();
+            }
+        })();
+    </script>
+    <script src="assets/js/main.js?v=1.0.1"></script>
     <script src="assets/js/animations.js"></script>
 </body>
 
