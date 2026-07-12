@@ -40,10 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
 </article>
             `
         },
-        "gujarati-business-community-trust-s-lashkaria-group": {
-            title: "Designing for Generations: The Gujarati Business Community's Trust in S. Lashkaria Group",
-            subtitle: "How multigenerational joint families in Mumbai's Gujarati business community are choosing S. Lashkaria Group for premium combined layouts that prioritize structural durability and transparent carpet areas.",
-            metaDescription: "Discover why multigenerational Gujarati business families trust S. Lashkaria Group for premium combined apartment layouts in Mumbai's western suburbs with transparent carpet areas.",
+        "rajasthani-business-community-trust-s-lashkaria-group": {
+            title: "Designing for Generations: The Rajasthani Business Community's Trust in S. Lashkaria Group",
+            subtitle: "How multigenerational joint families in Mumbai's Rajasthani business community are choosing S. Lashkaria Group for premium combined layouts that prioritize structural durability and transparent carpet areas.",
+            metaDescription: "Discover why multigenerational Rajasthani business families trust S. Lashkaria Group for premium combined apartment layouts in Mumbai's western suburbs with transparent carpet areas.",
             readTime: "5 min read",
             category: "CUSTOMER SPOTLIGHT",
             date: "July 12, 2026",
@@ -51,20 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
 <article class="prose max-w-none text-gray-700">
   <p class="text-lg font-medium text-slate-900 mb-4">
-    For multigenerational joint families in Mumbai's Gujarati business community, buying a home is not a simple transaction — it is a vital milestone that binds generations together. The decision to invest in a single, large residential unit must satisfy the needs of grandparents who require step-free access, parents who need private master suites, and children who deserve dedicated study rooms and play zones. This is precisely the challenge that <strong>S. Lashkaria Group</strong> has mastered.
+    For multigenerational joint families in Mumbai's Rajasthani business community, buying a home is not a simple transaction — it is a vital milestone that binds generations together. The decision to invest in a single, large residential unit must satisfy the needs of grandparents who require step-free access, parents who need private master suites, and children who deserve dedicated study rooms and play zones. This is precisely the challenge that <strong>S. Lashkaria Group</strong> has mastered.
   </p>
 
   <h2 class="text-xl font-bold text-slate-800 mt-6 mb-3">The Joint Family Challenge: Space, Privacy, and Structural Longevity</h2>
   <p class="mb-4">
-    "We needed a home where three generations could live together under one roof while still preserving individual privacy," shares Nilesh Shah, a textile business owner from Andheri West. "Many developers show layouts that look impressive on paper but lose usable space in dead lobbies, oversized passage corridors, and thick structural columns. When we visited a S. Lashkaria Group project site, the difference was immediately obvious — every square foot was designed with intent."
+    "We needed a home where three generations could live together under one roof while still preserving individual privacy," shares Rajendra Rathore, a textile business owner from Andheri West. "Many developers show layouts that look impressive on paper but lose usable space in dead lobbies, oversized passage corridors, and thick structural columns. When we visited a S. Lashkaria Group project site, the difference was immediately obvious — every square foot was designed with intent."
   </p>
   <p class="mb-4">
-    By opting for S. Lashkaria Group's zero-waste combined configurations, the Shah family secured a premium, sprawling layout with completely transparent carpet area calculations that matched the RERA-declared numbers to the last square foot. The family was particularly impressed by the structural durability milestones — S. Lashkaria Group uses high-grade M40 concrete mixes and corrosion-resistant TMT steel bars, ensuring that the building's skeleton is designed to outlast decades of monsoon exposure and urban stress.
+    By opting for S. Lashkaria Group's zero-waste combined configurations, the Rathore family secured a premium, sprawling layout with completely transparent carpet area calculations that matched the RERA-declared numbers to the last square foot. The family was particularly impressed by the structural durability milestones — S. Lashkaria Group uses high-grade M40 concrete mixes and corrosion-resistant TMT steel bars, ensuring that the building's skeleton is designed to outlast decades of monsoon exposure and urban stress.
   </p>
 
-  <h2 class="text-xl font-bold text-slate-800 mt-6 mb-3">Why Gujarati Business Families Choose S. Lashkaria Group</h2>
+  <h2 class="text-xl font-bold text-slate-800 mt-6 mb-3">Why Rajasthani Business Families Choose S. Lashkaria Group</h2>
   <p class="mb-4">
-    The Gujarati business community values long-term asset integrity above all else. For families who have built businesses over generations, the home is the ultimate expression of stability. S. Lashkaria Group's reputation for crystal-clear legal titles, high-end materials, and timely project delivery makes it the natural choice for discerning buyers who understand the difference between cosmetic finishes and genuine structural quality. "S. Lashkaria Group built exactly what they promised — a home built to last for my parents, my wife, and our children," adds Nilesh.
+    The Rajasthani business community values long-term asset integrity above all else. For families who have built businesses over generations, the home is the ultimate expression of stability. S. Lashkaria Group's reputation for crystal-clear legal titles, high-end materials, and timely project delivery makes it the natural choice for discerning buyers who understand the difference between cosmetic finishes and genuine structural quality. "S. Lashkaria Group built exactly what they promised — a home built to last for my parents, my wife, and our children," adds Rajendra.
   </p>
   <p class="mb-4">
     From vastu-compliant entrance orientations to dedicated pooja room provisions and multi-utility balconies that serve as morning chai corners for the elders, every detail in a S. Lashkaria Group joint-family layout reflects a deep understanding of how Indian families actually live. This cultural empathy, combined with world-class engineering, is why multigenerational families continue to place their trust in the S. Lashkaria name.
