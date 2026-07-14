@@ -110,16 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
             enquiryForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 
-                // Custom validation for Interested Project dropdown
-                const selectedProject = enquiryForm.querySelector('#selected-project');
-                if (selectedProject && !selectedProject.value) {
-                    const triggerBtn = enquiryForm.querySelector('#dropdown-trigger');
-                    if (triggerBtn) {
-                        triggerBtn.style.borderColor = '#ef4444'; // Red border
-                        triggerBtn.focus();
-                    }
-                    return;
-                }
 
                 const btn = enquiryForm.querySelector('button');
                 const originalText = btn.innerHTML;
@@ -146,12 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }).then(() => {
                     showSuccessModal('Your enquiry has been submitted successfully.');
                     enquiryForm.reset();
-                    const triggerText = enquiryForm.querySelector('#dropdown-trigger-text');
-                    if (triggerText) {
-                        triggerText.textContent = 'Interested Project';
-                        triggerText.classList.remove('text-slate-800');
-                        triggerText.classList.add('text-gray-400');
-                    }
+
                 }).catch(error => {
                     console.error('Error:', error);
                     alert('An error occurred. Please try again.');
