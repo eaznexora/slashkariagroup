@@ -312,16 +312,51 @@ document.addEventListener('DOMContentLoaded', () => {
             a.textContent.toLowerCase().includes('profile')
         );
 
+        // Focus trapping and A11y
+        const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        const firstFocusableElement = modal.querySelectorAll(focusableElements)[0];
+        const focusableContent = modal.querySelectorAll(focusableElements);
+        const lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            brochureLinks.forEach(l => l.setAttribute('aria-expanded', 'false'));
+        };
+
         brochureLinks.forEach(link => {
+            link.setAttribute('aria-expanded', 'false');
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 modal.classList.add('active');
+                link.setAttribute('aria-expanded', 'true');
+                if (firstFocusableElement) firstFocusableElement.focus();
             });
         });
 
-        closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+        closeBtn.addEventListener('click', closeModal);
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) modal.classList.remove('active');
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (!modal.classList.contains('active')) return;
+            if (e.key === 'Escape' || e.keyCode === 27) {
+                closeModal();
+                return;
+            }
+            let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+            if (!isTabPressed) return;
+            if (e.shiftKey) {
+                if (document.activeElement === firstFocusableElement) {
+                    lastFocusableElement.focus();
+                    e.preventDefault();
+                }
+            } else {
+                if (document.activeElement === lastFocusableElement) {
+                    firstFocusableElement.focus();
+                    e.preventDefault();
+                }
+            }
         });
 
         form.addEventListener('submit', (e) => {

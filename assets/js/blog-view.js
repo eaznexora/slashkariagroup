@@ -363,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // SEO: Update document title
         document.title = post.title + " | S. Lashkaria Group";
 
-        // SEO: Inject or update meta description
+        // SEO: Inject or update meta tags (Description & Open Graph)
         let metaDesc = document.querySelector('meta[name="description"]');
         if (!metaDesc) {
             metaDesc = document.createElement('meta');
@@ -371,6 +371,15 @@ document.addEventListener('DOMContentLoaded', () => {
             document.head.appendChild(metaDesc);
         }
         metaDesc.setAttribute('content', post.metaDescription);
+
+        let ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', post.title);
+
+        let ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute('content', post.metaDescription);
+
+        let ogImage = document.querySelector('meta[property="og:image"]');
+        if (ogImage) ogImage.setAttribute('content', post.imgSrc);
 
         // Update read time
         if (readTimeElement) {
@@ -385,10 +394,12 @@ document.addEventListener('DOMContentLoaded', () => {
             contentElement.innerHTML = post.content;
         }
 
-    } else if (!slug) {
+    } else {
         // Fallback: Check sessionStorage for legacy navigation (backward compat)
         const storedData = sessionStorage.getItem('currentBlogPost');
-        if (storedData) {
+        let renderedLegacy = false;
+        
+        if (!slug && storedData) {
             const postData = JSON.parse(storedData);
             const titleElement = document.querySelector('.blog-view-title-saas');
             const categoryElement = document.querySelector('.blog-view-category');
@@ -421,8 +432,37 @@ document.addEventListener('DOMContentLoaded', () => {
                         readTimeElement.appendChild(document.createTextNode(' ' + matchData.readTime));
                     }
                     contentElement.innerHTML = matchData.content;
+                    renderedLegacy = true;
                 }
             }
+        }
+        
+        if (!renderedLegacy) {
+            // Render Article Not Found
+            const contentElement = document.querySelector('.article-content');
+            if (contentElement) {
+                contentElement.innerHTML = `
+                    <div style="text-align: center; padding: 60px 20px; background: #f8fafc; border-radius: 12px; margin: 40px 0;">
+                        <h2 style="font-size: 28px; font-weight: 800; color: #192954; margin-bottom: 16px;">Article Not Found</h2>
+                        <p style="color: #64748b; font-size: 18px; margin-bottom: 30px;">The article you are looking for does not exist or has been moved.</p>
+                        <a href="blog.html" style="background: #192954; color: white; padding: 14px 32px; font-weight: 700; border-radius: 6px; text-decoration: none; display: inline-block; transition: background 0.3s;">&larr; Back to All Articles</a>
+                    </div>
+                `;
+            }
+            
+            const titleElement = document.querySelector('.blog-view-title-saas');
+            if (titleElement) titleElement.innerText = "Article Not Found";
+            
+            const subtitleElement = document.querySelector('.blog-view-subtitle');
+            if (subtitleElement) subtitleElement.innerText = "Please return to the main insights page.";
+            
+            const categoryElement = document.querySelector('.blog-view-category');
+            if (categoryElement) categoryElement.innerText = "ERROR 404";
+            
+            const heroImageElement = document.querySelector('.blog-view-featured-img');
+            if (heroImageElement) heroImageElement.style.display = 'none';
+            
+            document.title = "Article Not Found | S. Lashkaria Group";
         }
     }
 
